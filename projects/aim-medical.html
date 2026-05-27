@@ -37,11 +37,6 @@
       </header>
 
       <article class="project-body">
-        <figure class="proj-anim">
-          <svg id="proj-anim-aim-medical" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-label="Multimodal fusion of MRI, text, and EHR signals"></svg>
-          <p class="proj-anim-cap">Multimodal fusion - imaging, text, and clinical-record streams converging into a single prediction ŷ.</p>
-        </figure>
-
         <p>
           In 2026, I investigated multimodal foundation models for biomedicine
           at the
@@ -78,6 +73,14 @@
           The camera-ready was presented at CVPR&nbsp;2026 alongside the
           MMFM-BIOMED workshop program.
         </p>
+        <figure class="proj-figure">
+          <img src="../assets/figures/aim-medical.png" alt="Key figure for aim-medical"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fig-placeholder" style="display:none;">
+            Drop the key figure at <code>assets/figures/aim-medical.png</code>
+          </div>
+          <figcaption>Cross-modal attention map between imaging tokens and paired clinical-metadata tokens, surfacing which modalities dominate each prediction. (Figure from the OpenReview paper.)</figcaption>
+        </figure>
 
         <a class="proj-back" href="../#research">← Research</a>
       </article>

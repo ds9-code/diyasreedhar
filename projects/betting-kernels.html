@@ -40,11 +40,6 @@
       </header>
 
       <article class="project-body">
-        <figure class="proj-anim">
-          <svg id="proj-anim-betting-kernels" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-label="Wealth processes across K kernels"></svg>
-          <p class="proj-anim-cap">Wealth Wₜ across K kernels - the mixture (bold) tracks the best in hindsight.</p>
-        </figure>
-
         <p>
           How do you reliably detect when two AI models are behaving
           differently - without committing to a sample size up front? I built
@@ -80,6 +75,14 @@
         </ul>
 
         <p>The camera-ready preprint will be made available shortly.</p>
+        <figure class="proj-figure">
+          <img src="../assets/figures/betting-kernels.png" alt="Key figure for betting-kernels"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fig-placeholder" style="display:none;">
+            Drop the key figure at <code>assets/figures/betting-kernels.png</code>
+          </div>
+          <figcaption>Implicit posterior πₜ(λ) over K=8 candidate bandwidths concentrates on the optimal σ* by t=800. (Figure 1 of the paper.)</figcaption>
+        </figure>
 
         <a class="proj-back" href="../#research">← Research</a>
       </article>

@@ -868,6 +868,61 @@ h3 {
   color: var(--accent);
 }
 
+/* Per-project key figure (below main text) */
+.proj-figure {
+  margin: 32px 0 8px;
+  padding: 0;
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.proj-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  background: var(--bg);
+}
+
+.proj-figure figcaption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  padding: 16px 22px 18px;
+  line-height: 1.55;
+}
+
+.fig-placeholder {
+  aspect-ratio: 16 / 9;
+  background: repeating-linear-gradient(
+    45deg,
+    color-mix(in srgb, var(--accent) 6%, var(--bg-elev)),
+    color-mix(in srgb, var(--accent) 6%, var(--bg-elev)) 12px,
+    color-mix(in srgb, var(--accent) 12%, var(--bg-elev)) 12px,
+    color-mix(in srgb, var(--accent) 12%, var(--bg-elev)) 24px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  padding: 0 24px;
+}
+
+.fig-placeholder code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
 /* Per-project animation embed (akilan-style - inside card, smaller) */
 .proj-anim {
   margin: 0 0 24px;

@@ -37,11 +37,6 @@
       </header>
 
       <article class="project-body">
-        <figure class="proj-anim">
-          <svg id="proj-anim-aws-neurips" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-label="Parallel chip activation grid"></svg>
-          <p class="proj-anim-cap">A grid of Trainium chips lighting up in diagonal-wave patterns - what distributed finetuning feels like.</p>
-        </figure>
-
         <p>
           I built the official fine-tuning notebook for the
           <em>Build on Trainium</em> workshop at NeurIPS&nbsp;2025 - Amazon's
@@ -67,6 +62,14 @@
             to amortize compile cost across multi-epoch training runs.
           </li>
         </ul>
+        <figure class="proj-figure">
+          <img src="../assets/figures/aws-neurips.png" alt="Key figure for aws-neurips"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fig-placeholder" style="display:none;">
+            Drop the key figure at <code>assets/figures/aws-neurips.png</code>
+          </div>
+          <figcaption>Distributed-training throughput across Trainium accelerator chips at varying node counts during the Build-on-Trainium workshop notebook.</figcaption>
+        </figure>
 
         <a class="proj-back" href="../#research">← Research</a>
       </article>
