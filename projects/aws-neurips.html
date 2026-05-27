@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Distributed Fine-Tuning on AWS Trainium Accelerators · Diya Sreedhar</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../" class="nav-brand">Diya Sreedhar</a>
+      <div class="nav-links">
+        <a href="/#research" class="is-current">Research</a>
+        <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../academic-background.html">Background</a>
+        <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="project-hero">
+        <h1>Distributed Fine-Tuning on AWS Trainium Accelerators</h1>
+        <aside class="project-hero-anim">
+          <div class="chip-wrap chip-wrap-sm">
+            <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
+            <p class="chip-label">Explore Research</p>
+          </div>
+        </aside>
+      </header>
+
+      <article class="project-body">
+        <figure class="proj-anim">
+          <svg id="proj-anim-aws-neurips" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-label="Parallel chip activation grid"></svg>
+          <p class="proj-anim-cap">A grid of Trainium chips lighting up in diagonal-wave patterns - what distributed finetuning feels like.</p>
+        </figure>
+
+        <p>
+          I built the official fine-tuning notebook for the
+          <em>Build on Trainium</em> workshop at NeurIPS&nbsp;2025 - Amazon's
+          hands-on tutorial for training large language models on its custom
+          <a href="https://aws.amazon.com/ai/machine-learning/trainium/" target="_blank" rel="noopener noreferrer">Trainium AI accelerator chips</a>.
+          Several hundred researchers ran the notebook end-to-end during the
+          workshop, and the code shipped as the canonical entry point in the
+          public
+          <a href="https://github.com/aws-neuron/neuron-workshops" target="_blank" rel="noopener noreferrer">aws-neuron/neuron-workshops</a>
+          repository.
+        </p>
+
+        <ul>
+          <li>
+            Authored a reproducible PyTorch-on-Neuron finetuning workflow
+            covering tokenization, distributed-training configuration, and
+            inference benchmarking - runnable end-to-end in a single
+            workshop session.
+          </li>
+          <li>
+            Calibrated the notebook for Trainium's XLA-based compilation
+            model, identifying which patterns trigger recompilation and how
+            to amortize compile cost across multi-epoch training runs.
+          </li>
+        </ul>
+
+        <a class="proj-back" href="/#research">← Research</a>
+      </article>
+
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

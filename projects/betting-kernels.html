@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Anytime-Valid Two-Sample Testing over Kernel Families · Diya Sreedhar</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../" class="nav-brand">Diya Sreedhar</a>
+      <div class="nav-links">
+        <a href="/#research" class="is-current">Research</a>
+        <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../academic-background.html">Background</a>
+        <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="project-hero">
+        <h1>Anytime-Valid Two-Sample Testing over Kernel Families</h1>
+        <aside class="project-hero-anim">
+          <div class="chip-wrap chip-wrap-sm">
+            <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
+            <p class="chip-label">Explore Research</p>
+          </div>
+        </aside>
+      </header>
+
+      <article class="project-body">
+        <figure class="proj-anim">
+          <svg id="proj-anim-betting-kernels" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-label="Wealth processes across K kernels"></svg>
+          <p class="proj-anim-cap">Wealth Wₜ across K kernels - the mixture (bold) tracks the best in hindsight.</p>
+        </figure>
+
+        <p>
+          How do you reliably detect when two AI models are behaving
+          differently - without committing to a sample size up front? I built
+          a statistical test that can monitor streams of model outputs
+          continuously and stop the moment evidence is strong enough. The
+          method caught the 88%-vs-49% accuracy gap between Claude Sonnet&nbsp;4.6
+          and Haiku&nbsp;4.5 in just 22 samples, where a naive A/B-test peek
+          would have given the wrong answer. Accepted to the
+          <a href="https://hypothesis-testing-workshop.vercel.app/" target="_blank" rel="noopener noreferrer">ICML&nbsp;2026 Workshop on Hypothesis Testing</a>.
+        </p>
+
+        <ul>
+          <li>
+            The construction is the first anytime-valid two-sample test that
+            adapts over a continuous family of reproducing-kernel Hilbert
+            spaces, composing Shekhar–Ramdas online betting within each
+            kernel with method-of-mixtures aggregation across the family.
+          </li>
+          <li>
+            A matching lower bound from a bandpass-Gaussian construction
+            shows the <code>log&nbsp;K</code> aggregation cost is
+            information-theoretically unavoidable; a meta-theorem lifts the
+            construction to kernelized independence testing, KSD
+            goodness-of-fit, and change-point detection.
+          </li>
+          <li>
+            Across six LLM deployment-monitoring scenarios, the mixture beats
+            the post-hoc best-fixed-bandwidth oracle by 1.5× on
+            regime-uncertain streams and preserves Type-I control under
+            continuous monitoring - where a naive peeking <i>z</i>-test
+            inflates to a 34% false-positive rate.
+          </li>
+        </ul>
+
+        <p>The camera-ready preprint will be made available shortly.</p>
+
+        <a class="proj-back" href="/#research">← Research</a>
+      </article>
+
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

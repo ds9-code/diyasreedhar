@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Sparse-Autoencoder Calibration of Brain-MRI Foundation Models · Diya Sreedhar</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../" class="nav-brand">Diya Sreedhar</a>
+      <div class="nav-links">
+        <a href="/#research" class="is-current">Research</a>
+        <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../academic-background.html">Background</a>
+        <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="project-hero">
+        <h1>Sparse-Autoencoder Calibration of Brain-MRI Foundation Models</h1>
+        <aside class="project-hero-anim">
+          <div class="chip-wrap chip-wrap-sm">
+            <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
+            <p class="chip-label">Explore Research</p>
+          </div>
+        </aside>
+      </header>
+
+      <article class="project-body">
+        <figure class="proj-anim">
+          <svg id="proj-anim-caisi" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-label="Sparse feature activations across an SAE dictionary"></svg>
+          <p class="proj-anim-cap">Sparse activations across a 49,000-feature SAE - most stay dark; a handful fire on each scan.</p>
+        </figure>
+
+        <p>
+          A foundation model trained to predict brain age from MRI scans does
+          it almost entirely through three internal features. Once you find
+          those features, you can correct the model for new patient
+          populations without retraining - cutting brain-age prediction error
+          by <b>85% on a held-out dataset</b> and transferring to dementia
+          classification, time-to-stroke, and other clinical outcomes.
+          Conducted at the
+          <a href="https://www.nist.gov/caisi" target="_blank" rel="noopener noreferrer">U.S. Center for AI Standards and Innovation (CAISI)</a>
+          at NIST. Under review at ICML&nbsp;2026; contributed to the
+          <a href="https://www.aspirations.org/news/award-programs/ncwit-selects-2026-aic-collegiate-award-finalists" target="_blank" rel="noopener noreferrer">2026 NCWIT Collegiate Award (finalist)</a>.
+        </p>
+
+        <ul>
+          <li>
+            A TopK sparse autoencoder over <em>BrainIAC</em>'s 768-dimensional
+            CLS embedding, combined with causal masking, isolates three
+            feature directions (#857, #17827, #1796) accounting for ~90% of
+            the model's brain-age signal.
+          </li>
+          <li>
+            Those features biologically validate against canonical cortical
+            aging gradients (temporoparietal default-mode network, occipital
+            visual stream), and longitudinal tracking in OASIS-3 confirms
+            they capture real within-subject volume change rather than a
+            chronological-age shortcut.
+          </li>
+          <li>
+            A closed-form, single-reference Δv calibration on the three
+            features extends to four additional downstream tasks
+            (MCI classification, time-to-stroke, amyloid PET centiloid,
+            APOE allele dose), and the same 1–4 feature axis re-emerges
+            across four independently trained models - ViT, PlainConvUNet,
+            3D CNN, and Swin Transformer - confirming the signal lives in
+            the data geometry, not any one model's inductive bias.
+          </li>
+        </ul>
+
+        <p>A preprint of this work will be made available shortly.</p>
+
+        <a class="proj-back" href="/#research">← Research</a>
+      </article>
+
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
