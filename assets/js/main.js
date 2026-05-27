@@ -1137,8 +1137,9 @@
   // ───────────────────────────────────────────────────────────────────────
   var root = document.documentElement;
   var stored = localStorage.getItem("theme");
-  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (stored === "dark" || (!stored && prefersDark)) root.classList.add("dark");
+  // Default to light mode regardless of OS preference; only honour an explicit
+  // user choice persisted in localStorage.
+  if (stored === "dark") root.classList.add("dark");
 
   var toggle = document.getElementById("theme-toggle");
   if (toggle) {
