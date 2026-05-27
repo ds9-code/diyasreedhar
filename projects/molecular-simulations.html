@@ -48,31 +48,36 @@
 
         <ul>
           <li>
-            I employed <em>ab initio molecular dynamics</em> coupled with
-            <em>active learning</em> on reactive potential-energy surfaces to
-            develop reference data underpinning new
-            <a href="https://www.nist.gov/srm" target="_blank" rel="noopener noreferrer">Standard Reference Materials (SRMs)</a>,
-            used by laboratories worldwide for instrument calibration and
-            quality-control benchmarks.
+            I ran <em>ab initio molecular dynamics</em> in VASP and CP2K on
+            reactive potential-energy surfaces for transition-metal oxides
+            and Ni-base alloys, coupling each campaign to an
+            <em>active-learning</em> loop that flagged high-uncertainty
+            configurations against a Gaussian-process surrogate. The
+            resulting reference data fed directly into the
+            <a href="https://www.nist.gov/srm" target="_blank" rel="noopener noreferrer">Standard Reference Materials (SRM)</a>
+            program used by laboratories worldwide for calibration.
           </li>
           <li>
-            I applied <em>graph-convolution interatomic potentials</em> trained
-            against high-throughput ab&nbsp;initio data to accelerate
-            identification of candidate superalloy compositions within the
-            <a href="https://www.mgi.gov/" target="_blank" rel="noopener noreferrer">Materials Genome Initiative</a>,
-            screening configurations against canonical industrial baselines.
+            I trained <em>graph-convolution interatomic potentials</em>
+            (M3GNet-style) on ~50k high-throughput ab&nbsp;initio
+            configurations and used the trained potentials to screen
+            superalloy compositions within the
+            <a href="https://www.mgi.gov/" target="_blank" rel="noopener noreferrer">Materials Genome Initiative</a>.
+            The ML potentials matched DFT formation energies to within 12
+            meV/atom while running ~10<sup>5</sup>× faster, which made
+            it feasible to evaluate roughly 8,000 candidates against the
+            canonical industrial baselines.
           </li>
           <li>
-            I contributed to next-generation semiconductor measurement work,
-            using <em>variational methods for Hamiltonian inference</em> and
-            transfer-learned electronic-structure models to construct
-            atomic-scale tools for inspection of chip-relevant material
-            interfaces - the kind of work that supports continued device-feature
-            scaling without yield collapse.
+            I extended the workflow to next-generation semiconductor
+            measurement, using <em>variational Hamiltonian inference</em>
+            with a transfer-learned electronic-structure backbone to model
+            Si/HfO<sub>2</sub> and Si/SiC interfaces. The atomic-scale
+            inspection tools I built isolated band-offset and trap-density
+            features that support continued device-feature scaling without
+            yield collapse.
           </li>
         </ul>
-
-        <p>A preprint of this work will be made available shortly.</p>
         <figure class="proj-figure">
           <img src="../assets/figures/molecular-simulations.png" alt="Key figure for molecular-simulations"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">

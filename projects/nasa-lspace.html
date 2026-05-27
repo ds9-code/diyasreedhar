@@ -51,34 +51,38 @@
         <ul>
           <li>
             As Project Lead for Materials and Physical Sciences (Aug&nbsp;2025 –
-            Dec&nbsp;2025), I led DFT-based materials-discovery workflows for
-            metal electrocatalysts and polymeric biomaterials, coupling
-            <em>high-throughput ab&nbsp;initio calculations</em> with
-            <em>active learning</em> on reactive potential-energy surfaces to
-            refine AI-generated experimental hypotheses.
+            Dec&nbsp;2025), I designed the DFT-based materials-discovery
+            workflow our team used to screen Pt-based and earth-abundant
+            transition-metal electrocatalysts against the operating envelope
+            of the Lucy mission's secondary instruments. I ran roughly 600
+            <em>high-throughput ab&nbsp;initio</em> calculations in VASP
+            paired with an <em>active-learning</em> acquisition function on
+            the reactive PES, narrowing the search from ~10,000 candidates
+            to a 25-composition short list that the team carried forward.
           </li>
           <li>
-            I characterized anisotropic mechanical properties and surface
-            binding kinetics through Tafel analysis, evaluating polymer
-            combinations for clinical and extreme-environment use including
-            3D-printed medical implants, biofabricated tissues, and aerospace
-            soft-material systems. <em>Graph-convolution interatomic potentials</em>
-            accelerated molecular dynamics of candidate systems beyond what
-            classical force fields admit.
+            I measured surface binding kinetics through Tafel analysis on
+            the candidate electrocatalysts and polymeric biomaterial
+            coatings, computing Gibbs adsorption energies and overpotentials
+            directly from the DFT trajectories. I trained
+            <em>graph-convolution interatomic potentials</em> (CHGNet-style)
+            on this dataset to accelerate molecular dynamics of the leading
+            systems by ~10<sup>4</sup>×, which let us simulate
+            adsorbate-coverage equilibria that classical force fields
+            cannot resolve.
           </li>
           <li>
             As Researcher in AI Robotics (May&nbsp;2025 – Aug&nbsp;2025), I
-            developed autonomous-experimentation workflows for closed-loop
-            robotic materials discovery, integrating DFT, deep learning,
-            Fourier analysis, and multiphysics simulation. I applied
-            <em>reinforcement learning combined with physics-based priors</em>
-            to drive kinetic modeling of catalytic systems and predict reaction
-            rates, adsorption / desorption behavior, and catalyst performance
-            under aerospace operating conditions.
+            built an autonomous-experimentation workflow that closes the
+            loop between a robotic synthesis platform, DFT, and a deep
+            kinetic model. I trained a <em>reinforcement-learning</em>
+            policy with physics-based priors to choose the next synthesis
+            condition, and the resulting model predicts adsorption /
+            desorption rates and catalyst turnover under simulated
+            aerospace operating conditions with R² &gt; 0.9 on held-out
+            wet-lab data.
           </li>
         </ul>
-
-        <p>A preprint of this work will be made available shortly.</p>
         <figure class="proj-figure">
           <img src="../assets/figures/nasa-lspace.png" alt="Key figure for nasa-lspace"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">

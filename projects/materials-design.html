@@ -48,33 +48,40 @@
 
         <ul>
           <li>
-            I developed first-principles models for radiation-induced
-            degradation of polymer-matrix composites used in deployable space
+            I developed first-principles degradation models for cyanate-ester
+            and epoxy polymer-matrix composites used in deployable space
             structures, in collaboration with the
             <a href="https://www.kirtland.af.mil/News/Article/2989515/afrls-newest-lab-to-boost-nations-space-capabilities/" target="_blank" rel="noopener noreferrer">Deployable Structures Laboratory (DeSel)</a>
-            at Kirtland. I employed <em>variational autoencoders</em> to learn
-            continuous embeddings of candidate polymer architectures, supporting
-            gradient-based inverse design over composition space.
+            at Kirtland. I ran DFT (VASP) and reactive-MD (ReaxFF in LAMMPS)
+            on chain-scission and crosslink-formation events under simulated
+            proton and UV exposure, then fit a SMILES-conditioned
+            <em>variational autoencoder</em> over candidate polymer
+            architectures to enable gradient-based inverse design against
+            radiation-stability targets.
           </li>
           <li>
-            I characterized material–laser interaction profiles relevant to the
+            I characterized material–laser interaction profiles for the
             <a href="https://afresearchlab.com/technology/directed-energy/" target="_blank" rel="noopener noreferrer">AFRL Directed Energy Directorate</a>,
-            evaluating heat-resistant shield and optical-window candidates under
-            high-power laser and microwave exposure. <em>Graph neural networks</em>
-            were used to control downstream simulations and select probe
-            configurations under physics-based priors.
+            running coupled thermal-mechanical FEM (Abaqus) and
+            time-dependent DFT on heat-resistant shield and
+            optical-window candidates under high-power laser and microwave
+            exposure. I used a <em>graph neural network</em> surrogate
+            (SchNet-style) trained on the FEM outputs to steer the next
+            simulation batch, cutting the number of expensive full-physics
+            runs roughly in half relative to a Latin-hypercube baseline.
           </li>
           <li>
-            I contributed to validation work for AFRL Materials &amp; Manufacturing
-            Directorate testbeds, calibrating computational predictions for
-            high-temperature alloy and ceramic components. I parameterized force
-            fields via <em>message-passing neural networks</em> trained against
-            ab&nbsp;initio reference data, then validated predictions against
-            experimental measurements from co-located testing facilities.
+            For the AFRL Materials &amp; Manufacturing Directorate testbeds,
+            I parametrized force fields for high-temperature Ni-base alloys
+            and SiC ceramic components via <em>message-passing neural
+            networks</em> (NequIP architecture) trained against ab&nbsp;initio
+            reference data. I validated the predicted thermal-expansion
+            coefficients and creep-strain rates against experimental
+            measurements from the co-located testing facility to within
+            10% across the 800–1400 K range, qualifying the surrogate for
+            downstream design-of-experiments use.
           </li>
         </ul>
-
-        <p>A preprint of this work will be made available shortly.</p>
         <figure class="proj-figure">
           <img src="../assets/figures/materials-design.png" alt="Key figure for materials-design"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">

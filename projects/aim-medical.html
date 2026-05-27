@@ -50,22 +50,25 @@
 
         <ul>
           <li>
-            I probed how the model fuses imaging embeddings with paired
-            clinical metadata, identifying which modalities dominate which
-            decisions and where disagreement between them signals downstream
-            failure modes.
+            I probed how the model fuses CT / MRI imaging embeddings with
+            paired clinical metadata via cross-modal attention analysis,
+            and identified the specific decision regimes in which imaging
+            tokens dominate vs. metadata tokens, and where disagreement
+            between the two predicts downstream failure.
           </li>
           <li>
             I evaluated downstream transfer on radiologist-relevant tasks -
-            diagnosis, prognosis, and out-of-distribution shift - quantifying
-            how multimodal pretraining changes calibration and robustness
-            relative to imaging-only baselines.
+            diagnosis, prognosis, and out-of-distribution shift - and
+            quantified how multimodal pretraining changes calibration (ECE)
+            and robustness (worst-group AUROC) relative to imaging-only
+            baselines, holding architecture and training budget fixed.
           </li>
           <li>
             I drew clinical implications for medical-AI deployment:
-            multimodal pretraining is not only an accuracy lever; it presents
-            a distinct failure-mode surface that auditors and clinicians need
-            to characterize before integration.
+            multimodal pretraining is not only an accuracy lever - it
+            presents a distinct failure-mode surface that auditors and
+            clinicians need to characterize before integration, and I
+            propose concrete diagnostics for that audit in the paper.
           </li>
         </ul>
 

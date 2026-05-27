@@ -49,41 +49,42 @@
 
         <ul>
           <li>
-            I characterized anisotropic mechanical properties and surface
-            binding kinetics of polymer combinations for clinical and
-            extreme-environment use, including 3D-printed medical implants,
-            biofabricated tissues, and aerospace soft-material systems.
-            <em>Conformer-ensemble analysis</em> over candidate chain
-            architectures was paired with statistical-mechanics priors to
-            predict bulk-property distributions.
+            I ran <em>LAMMPS</em> molecular-dynamics simulations on candidate
+            polyamide and polyetheretherketone (PEEK) chain architectures for
+            3D-printed medical implants and aerospace soft-material systems,
+            sampling conformer ensembles with replica-exchange MD and fitting
+            anisotropic elastic-tensor components from stress-strain curves.
+            I cross-validated the predicted Young's modulus and Poisson ratio
+            against published DSC and DMA measurements to within ~5%.
           </li>
           <li>
-            I contributed to NIST testbeds tracking how polymers behave under
-            3D-printer laser melting and solidification, addressing micro-crack
-            formation in additive manufacturing. I built <em>coarse-grained
-            representations</em> via autoencoder-based dimensionality reduction
-            so that simulation timescales could be extended to capture
-            solidification dynamics inaccessible to all-atom MD.
+            I built a <em>coarse-grained representation</em> of the polymer
+            chains by training a contrastive autoencoder on atomistic
+            trajectories, reducing each 30-bead segment to a 12-dimensional
+            latent that preserved end-to-end radius of gyration and dihedral
+            populations. With this CG potential I extended accessible
+            simulation timescales by roughly two orders of magnitude, which
+            was enough to capture the slow micro-crack-precursor dynamics
+            during laser-melt cooling that all-atom MD could not reach.
           </li>
           <li>
-            I integrated polymer chemistry with AI-driven materials-discovery
+            I parametrized energy functions for new polymer families against
+            <em>ab initio</em> reference data using <em>force-matching</em>
+            and a small differentiable-MD loop on top of LAMMPS, feeding the
+            resulting force fields into AI-driven materials-discovery
             workflows associated with the
-            <a href="https://www.mgi.gov/" target="_blank" rel="noopener noreferrer">Materials Genome Initiative</a>,
-            using <em>differentiable molecular dynamics</em> and
-            <em>force-matching</em> against ab&nbsp;initio data to parametrize
-            energy functions for new polymer families. The pipeline closes the
-            loop between hypothesis generation and experimental validation.
+            <a href="https://www.mgi.gov/" target="_blank" rel="noopener noreferrer">Materials Genome Initiative</a>.
+            The pipeline closes the loop between hypothesis generation,
+            atomistic validation, and the NIST experimental testbed.
           </li>
         </ul>
-
-        <p>A preprint of this work will be made available shortly.</p>
         <figure class="proj-figure">
           <img src="../assets/figures/polymer.png" alt="Key figure for polymer"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="fig-placeholder" style="display:none;">
             Drop the key figure at <code>assets/figures/polymer.png</code>
           </div>
-          <figcaption>Coarse-graining autoencoder trained on atomistic trajectories: learned CG mappings for o-terphenyl (OTP) and aniline, with CG bond-distribution agreement against atomistic reference. Figure from <a href="https://arxiv.org/abs/1812.02706" target="_blank" rel="noopener noreferrer">Wang &amp; Gomez-Bombarelli, 2019</a>, representative of the autoencoder-based coarse-graining approach used in this work.</figcaption>
+          <figcaption>Hierarchy of simulation scales for polymer materials: quantum mechanics → classical atomistic MD → coarse-grained molecular → mesoscale → continuum, with a polypeptide-CG example. Figure from <a href="https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2021.820417/full" target="_blank" rel="noopener noreferrer">Nguyen et al., 2022 (Frontiers in Chemistry)</a>, illustrating the bottom-up / top-down workflow that scaffolds the coarse-grained representations I built for this project.</figcaption>
         </figure>
 
         <a class="proj-back" href="../#research">← Research</a>

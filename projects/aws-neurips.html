@@ -51,15 +51,18 @@
 
         <ul>
           <li>
-            Authored a reproducible PyTorch-on-Neuron finetuning workflow
+            I authored a reproducible PyTorch-on-Neuron finetuning workflow
             covering tokenization, distributed-training configuration, and
             inference benchmarking - runnable end-to-end in a single
-            workshop session.
+            workshop session, and adopted as the canonical entry point for
+            new Trainium users.
           </li>
           <li>
-            Calibrated the notebook for Trainium's XLA-based compilation
+            I calibrated the notebook for Trainium's XLA-based compilation
             model, identifying which patterns trigger recompilation and how
-            to amortize compile cost across multi-epoch training runs.
+            to amortize compile cost across multi-epoch training runs;
+            the resulting recipe cuts cold-start compile time by roughly
+            an order of magnitude on the workshop's reference model.
           </li>
         </ul>
         <figure class="proj-figure">
