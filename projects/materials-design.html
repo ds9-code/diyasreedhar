@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noindex, nofollow" />
-    <title>Radiation-Induced Degradation Models for Space-Vehicle Composites · Diya Sreedhar</title>
+    <title>Machine-Learning Quantum Chemistry for PFAS Destruction · Diya Sreedhar</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,7 @@
 
     <main class="container">
       <header class="project-hero">
-        <h1>Radiation-Induced Degradation Models for Space-Vehicle Composites</h1>
+        <h1>Machine-Learning Quantum Chemistry for PFAS Destruction</h1>
         <aside class="project-hero-anim">
           <div class="chip-wrap chip-wrap-sm">
             <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
@@ -38,48 +38,76 @@
 
       <article class="project-body">
         <p>
-          Through the U.S. Department of Defense, I conducted materials-design
-          research at the
-          <a href="https://afresearchlab.com/technology/materials-and-manufacturing/" target="_blank" rel="noopener noreferrer">Air Force Research Laboratory (AFRL)</a>
-          on Kirtland Air Force Base in Albuquerque, New Mexico. My focus was
-          extreme-environment structural materials for space-vehicle and
-          directed-energy applications. As a brief summary of my research:
+          Through the U.S. Department of Defense's
+          <a href="https://serdp-estcp.mil/" target="_blank" rel="noopener noreferrer">Strategic Environmental Research and Development Program (SERDP)</a>
+          and <a href="https://serdp-estcp.mil/" target="_blank" rel="noopener noreferrer">ESTCP</a>,
+          I conducted machine-learning quantum-chemistry research on the
+          destruction of per- and polyfluoroalkyl substances (PFAS) - the
+          "forever chemicals" that resist conventional water-treatment chemistry
+          and persist indefinitely in groundwater near DoD installations. My
+          work spanned three SERDP projects and a treatment-train build-out:
         </p>
 
         <ul>
           <li>
-            I developed first-principles degradation models for cyanate-ester
-            and epoxy polymer-matrix composites used in deployable space
-            structures, in collaboration with the
-            <a href="https://www.kirtland.af.mil/News/Article/2989515/afrls-newest-lab-to-boost-nations-space-capabilities/" target="_blank" rel="noopener noreferrer">Deployable Structures Laboratory (DeSel)</a>
-            at Kirtland. I ran DFT (VASP) and reactive-MD (ReaxFF in LAMMPS)
-            on chain-scission and crosslink-formation events under simulated
-            proton and UV exposure, then fit a SMILES-conditioned
-            <em>variational autoencoder</em> over candidate polymer
-            architectures to enable gradient-based inverse design against
-            radiation-stability targets.
+            <b>ML-accelerated quantum chemistry for PFAS degradation pathways
+            (SERDP ER21-1019).</b> I trained machine-learning surrogates on
+            high-fidelity <em>DFT</em> datasets to predict PFAS
+            <em>thermodynamic behavior</em>, <em>unimolecular decomposition</em>
+            routes, and <em>bond-cleavage energies</em> along multi-carbon
+            backbones. Once trained, the surrogate predicts these quantities
+            in a fraction of a second per molecule - collapsing the
+            hours-to-days <em>DFT bottleneck</em> per transition state - and
+            I used it to run high-throughput virtual screening of thousands of
+            theoretical PFAS variants against thermal and chemical destruction
+            conditions, narrowing the candidate set to a tractable shortlist
+            for downstream destruction-reactor work.
           </li>
           <li>
-            I characterized material–laser interaction profiles for the
-            <a href="https://afresearchlab.com/technology/directed-energy/" target="_blank" rel="noopener noreferrer">AFRL Directed Energy Directorate</a>,
-            running coupled thermal-mechanical FEM (Abaqus) and
-            time-dependent DFT on heat-resistant shield and
-            optical-window candidates under high-power laser and microwave
-            exposure. I used a <em>graph neural network</em> surrogate
-            (SchNet-style) trained on the FEM outputs to steer the next
-            simulation batch, cutting the number of expensive full-physics
-            runs roughly in half relative to a Latin-hypercube baseline.
+            <b>Closed-loop ML control of destruction reactors (SERDP
+            ER23-5353).</b> In collaboration with
+            <a href="https://www.remedyscientific.com/" target="_blank" rel="noopener noreferrer">Remedy Scientific</a>,
+            I built an <em>active-learning</em> optimization loop that ties
+            real-time physical sensors - reaction chemistry, temperature
+            fluctuations, fluid velocity, background organic-matter load - to
+            autonomous control over destruction-reactor parameters. The ML
+            agent continuously measures reaction state and dynamically adjusts
+            wave frequencies, chemical-additive ratios, and flow rates to hold
+            the reactor at peak destruction efficiency while suppressing the
+            formation of toxic short-chain PFAS byproducts that simpler
+            open-loop control regularly produces.
           </li>
           <li>
-            For the AFRL Materials &amp; Manufacturing Directorate testbeds,
-            I parametrized force fields for high-temperature Ni-base alloys
-            and SiC ceramic components via <em>message-passing neural
-            networks</em> (NequIP architecture) trained against ab&nbsp;initio
-            reference data. I validated the predicted thermal-expansion
-            coefficients and creep-strain rates against experimental
-            measurements from the co-located testing facility to within
-            10% across the 800–1400 K range, qualifying the surrogate for
-            downstream design-of-experiments use.
+            <b>Single-atom photocatalyst inverse design (SERDP ER20-1341).</b>
+            I contributed to the inverse design of a single-atom catalyst
+            (SAC): isolated platinum atoms anchored onto a silicon-carbide
+            (SiC) semiconductor substrate. I ran first-principles
+            <em>DFT</em> on the Pt/SiC interface to study the electron-transfer
+            dynamics at the boundary where the lone Pt atom meets the SiC
+            surface, mapping how the precise atomic spacing of the dispersal
+            shifts the metal's <em>d-band center</em>. The resulting catalyst
+            selectively destabilizes the electronic structure of incoming
+            PFAS molecules and lowers the activation energy for ultraviolet
+            light to snap the carbon-fluorine (C-F) bond - the ultra-stable
+            bond that makes PFAS "forever".
+          </li>
+          <li>
+            <b>Electrochemical-oxidation treatment trains.</b> Because PFAS is
+            typically diluted across millions of gallons of groundwater, I
+            contributed to multi-stage modular "treatment trains" that
+            combine physical concentration with destructive electrochemistry
+            rather than treating the whole water volume. The front stage uses
+            <em>Surface Active Foam Fractionation (SAFF)</em> to bubble air
+            through contaminated water, exploiting the hydrophobic nature of
+            PFAS to trap and concentrate the chemicals on the foam surface;
+            the hyper-concentrated foam then feeds an advanced
+            <em>electrochemical-oxidation (EO)</em> reactor. I optimized the
+            surface chemistry of the
+            <em>boron-doped diamond</em> and <em>mixed-metal-oxide</em>
+            electrodes to generate hydroxyl radicals directly at the electrode
+            boundary layer, slicing through the concentrated PFAS chains at a
+            small fraction of the power load that whole-volume treatment
+            would require.
           </li>
         </ul>
         <figure class="proj-figure">
@@ -88,7 +116,7 @@
           <div class="fig-placeholder" style="display:none;">
             Drop the key figure at <code>assets/figures/materials-design.png</code>
           </div>
-          <figcaption>Inverse-design pipeline for polymers under extreme conditions: a syntax-directed VAE maps polymer SMILES to and from a continuous latent space, Gaussian-process regression supplies property surrogates for bandgap E<sub>g</sub> and glass-transition T<sub>g</sub>, and new candidates are decoded near target neighborhoods. Figure from <a href="https://arxiv.org/abs/2011.02551" target="_blank" rel="noopener noreferrer">Batra et al., 2020</a>, representative of the VAE-based polymer inverse-design approach used in this work.</figcaption>
+          <figcaption>PFOA decomposition mechanism on a Pt<sub>1</sub>/SiC single-atom catalyst: photo-Kolbe decarboxylation followed by step-wise hydrodefluorination, with the isolated Pt site driving hydrogen spillover onto SiC such that the dissociation barrier collapses and the C-F bond cleaves under UV. Figure from <a href="https://pubs.acs.org/doi/abs/10.1021/acscatal.8b02660" target="_blank" rel="noopener noreferrer">Huang et al., <i>ACS Catalysis</i> 2018</a>, the foundational Pt<sub>1</sub>/SiC SAC paper this project's photocatalyst-design work builds on.</figcaption>
         </figure>
 
         <a class="proj-back" href="../#research">← Research</a>

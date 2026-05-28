@@ -12,7 +12,7 @@
     { id: "nasa-lspace",      glyph: "atom",     label: "Density Functional Theory",           href: "projects/nasa-lspace.html",          tone: 4 },
     { id: "aws-neurips",      glyph: "chip",     label: "Electrical Engineering for AI",       href: "projects/aws-neurips.html",          tone: 1 },
     { id: "polymer",          glyph: "polymer",  label: "Polymer Sciences",                    href: "projects/polymer.html",              tone: 3 },
-    { id: "materials-design", glyph: "lattice",  label: "Materials Design",                    href: "projects/materials-design.html",     tone: 2 },
+    { id: "materials-design", glyph: "lattice",  label: "PFAS Destruction Chemistry",          href: "projects/materials-design.html",     tone: 2 },
     { id: "molecular-sims",   glyph: "molecule", label: "Molecular Simulations and Modeling",  href: "projects/molecular-simulations.html",tone: 4 },
   ];
 
