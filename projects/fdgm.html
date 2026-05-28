@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Transient Structural Capabilities in Autoregressive Transformers · Diya Sreedhar</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../" class="nav-brand">Diya Sreedhar</a>
+      <div class="nav-links">
+        <a href="../#research" class="is-current">Research</a>
+        <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../academic-background.html">Background</a>
+        <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="project-hero">
+        <h1>What a Small Autoregressive Transformer Briefly Learns and Then Forgets</h1>
+        <aside class="project-hero-anim">
+          <div class="chip-wrap chip-wrap-sm">
+            <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
+            <p class="chip-label">Explore Research</p>
+          </div>
+        </aside>
+      </header>
+
+      <article class="project-body">
+        <p>
+          With <a href="https://openreview.net/profile?id=~Juliana_Li1" target="_blank" rel="noopener noreferrer">Juliana&nbsp;Li</a>,
+          I asked which capabilities a small 11.5M-parameter autoregressive
+          transformer genuinely internalizes during pretraining and which it
+          only briefly approximates before discarding. Accepted to the
+          <a href="https://fdgm-workshop.github.io/FDGM_ICML2026/" target="_blank" rel="noopener noreferrer">Foundations of Deep Generative Models (FoGen) Workshop</a>
+          at ICML&nbsp;2026 (Seoul). Paper on
+          <a href="https://openreview.net/forum?id=9D0qO8cB1M" target="_blank" rel="noopener noreferrer">OpenReview</a>.
+        </p>
+
+        <ul>
+          <li>
+            <b>Transient structural emergence.</b> Across five seeds, I tracked
+            linear-probe accuracy for three <em>structural</em> capabilities
+            during pretraining - end-of-sentence prediction, modal-verb
+            continuation, and adjective-order coherence. All three exhibit the
+            same peak-then-collapse trajectory: the probe rises early, peaks
+            mid-training, and then degrades back toward chance. Lexical and
+            part-of-speech probes, by contrast, remain stable across the same
+            run. This is direct evidence that "capability emergence" curves
+            can hide capability <em>loss</em> at small scale.
+          </li>
+          <li>
+            <b>Probe-specific head repurposing.</b> Using
+            <em>activation patching</em> and targeted head ablations across the
+            model's early layers, I localized the collapse to a small set of
+            attention heads in the first two transformer blocks. The same heads
+            that briefly carry the structural-probe signal are later
+            <em>repurposed</em> for other downstream functions -
+            mid-training the circuit is overwritten in place rather than
+            shrunk. The repurposing is probe-specific: different structural
+            capabilities collapse onto different head subsets.
+          </li>
+          <li>
+            <b>Implication for memorization vs. generalization.</b> The
+            peak-then-collapse pattern is a candidate failure mode for the
+            memorization–generalization story in small autoregressive
+            models: the model briefly induces a structural rule, then
+            overwrites the responsible circuit as training continues. We
+            argue this means snapshot-level "emergence" claims need to be
+            read against the full training trajectory before they support
+            generalization conclusions.
+          </li>
+        </ul>
+        <figure class="proj-figure">
+          <img src="../assets/figures/fdgm.png" alt="Key figure for FDGM paper"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fig-placeholder" style="display:none;">
+            Drop the key figure at <code>assets/figures/fdgm.png</code>
+          </div>
+          <figcaption>Per-seed argmax-accuracy trajectories for the three structural probes (end-of-sentence, modal continuation, adjective order) over pretraining. All three exhibit a peak-then-collapse shape across five seeds, though peak timing varies (especially for <em>adjective order</em>). Figure&nbsp;1 of Li &amp; Sreedhar, FoGen&nbsp;@&nbsp;ICML&nbsp;2026.</figcaption>
+        </figure>
+
+        <a class="proj-back" href="../#research">← Research</a>
+      </article>
+
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

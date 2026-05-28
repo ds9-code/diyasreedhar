@@ -9,6 +9,7 @@
     { id: "nvidia-litl",      glyph: "helix",    label: "Lab-in-the-Loop AI for Life Sciences",href: "projects/nvidia-litl.html",          tone: 3 },
     { id: "proton",           glyph: "kg",       label: "Graph AI for Drug Repurposing",       href: "projects/proton.html",               tone: 2 },
     { id: "betting-kernels",  glyph: "stats",    label: "Statistics for ML",                   href: "projects/betting-kernels.html",      tone: 1 },
+    { id: "fdgm",             glyph: "peak",     label: "Foundations of Deep Generative Models",href: "projects/fdgm.html",                 tone: 4 },
     { id: "aim-medical",      glyph: "leaf",     label: "Foundation Models for Life Sciences", href: "projects/aim-medical.html",          tone: 3 },
     { id: "caisi",            glyph: "tau",      label: "Mech Interp · Neurodegeneration",     href: "projects/caisi.html",                tone: 2 },
     { id: "nasa-lspace",      glyph: "atom",     label: "Density Functional Theory",           href: "projects/nasa-lspace.html",          tone: 4 },
@@ -76,6 +77,11 @@
         f.appendChild(el("line", { class: "c-icon-path", x1: 0, y1: 0, x2: p[0], y2: p[1] }));
         f.appendChild(el("circle", { class: "c-icon-dot", cx: p[0], cy: p[1], r: 1.7 }));
       });
+    } else if (glyph === "peak") {
+      // Peak-then-collapse training curve (transient emergence)
+      f.appendChild(el("path", { class: "c-icon-path", d: "M-10,7 L10,7" }));
+      f.appendChild(el("path", { class: "c-icon-path", d: "M-10,6 Q-6,6 -3,-2 Q0,-7 3,-2 Q6,4 10,5" }));
+      f.appendChild(el("circle", { class: "c-icon-dot", cx: 0, cy: -7, r: 1.6 }));
     } else if (glyph === "kg") {
       // Knowledge-graph hub-and-spokes (heterogeneous graph transformer)
       f.appendChild(el("circle", { class: "c-icon-dot", cx: 0, cy: 0, r: 2.4 }));
@@ -644,8 +650,8 @@
   // ── CANDIDATE B - Slow rotation + breathing radius ─────────────────────
   function initBreathingRing(svg, labelEl) {
     if (!svg) return;
-    var projects = PROJECTS.slice(0, 10);
-    var CX = 200, CY = 165, BASE_R = 108, N = 10;
+    var projects = PROJECTS.slice(0, 11);
+    var CX = 200, CY = 165, BASE_R = 108, N = 11;
 
     var outline = el("polygon", { class: "morph-outline" });
     svg.appendChild(outline);
