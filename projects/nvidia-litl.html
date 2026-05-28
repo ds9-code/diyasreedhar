@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Lab-in-the-Loop AI for Life-Science Discovery · Diya Sreedhar</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../" class="nav-brand">Diya Sreedhar</a>
+      <div class="nav-links">
+        <a href="../#research" class="is-current">Research</a>
+        <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../academic-background.html">Background</a>
+        <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="project-hero">
+        <h1>Lab-in-the-Loop AI for Life-Science Discovery</h1>
+        <aside class="project-hero-anim">
+          <div class="chip-wrap chip-wrap-sm">
+            <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
+            <p class="chip-label">Explore Research</p>
+          </div>
+        </aside>
+      </header>
+
+      <article class="project-body">
+        <p>
+          At
+          <a href="https://research.nvidia.com/" target="_blank" rel="noopener noreferrer">NVIDIA Research</a>,
+          I worked on the
+          <a href="https://www.nvidia.com/en-us/use-cases/lab-in-the-loop-ai-for-life-science/" target="_blank" rel="noopener noreferrer">lab-in-the-loop (LITL)</a>
+          stack within
+          <a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/" target="_blank" rel="noopener noreferrer">Healthcare and Life Sciences</a>
+          - an iterative discovery loop in which generative-AI models propose
+          molecular and biological hypotheses, robotic platforms execute the
+          wet-lab experiments, and the resulting assay readouts retrain the
+          models in place. The integration target is the
+          <a href="https://www.nvidia.com/en-us/clara/bionemo/" target="_blank" rel="noopener noreferrer">BioNeMo</a>
+          biofoundation-model platform deployed through NIM microservices. As a
+          brief summary of my work:
+        </p>
+
+        <ul>
+          <li>
+            <b>Generative chemistry with property-constrained sampling.</b>
+            I fine-tuned and benchmarked
+            <a href="https://arxiv.org/abs/2208.09016" target="_blank" rel="noopener noreferrer">MolMIM</a>
+            and GenMol - BioNeMo's mutual-information-maximizing
+            small-molecule generators over SMILES - against target binding
+            and ADMET profiles. I implemented a CMA-ES property-guided
+            sampler over MolMIM's latent space that returns hit-rate
+            improvements of roughly 30% over an unconstrained baseline on
+            internal benchmarks, then packaged the workflow as a
+            BioNeMo NIM endpoint that retrains on each round of wet-lab
+            feedback.
+          </li>
+          <li>
+            <b>Protein structure and binding prediction.</b> I wired
+            <em>AlphaFold2-Multimer</em> and <em>RoseTTAFold</em> structure
+            predictions into the loop alongside binding-affinity scoring with
+            <em>EquiDock</em>'s SE(3)-equivariant docking head and
+            <em>DualBind</em>'s graph-based binding free-energy model. Cryo-EM
+            and surface-plasmon-resonance assay results from the lab feed back
+            as residue-level confidence priors, refining the predicted
+            complex iteratively rather than at a single shot.
+          </li>
+          <li>
+            <b>Physics-based filtering before lab spend.</b> I ran
+            <em>physics-based molecular dynamics</em> (OpenMM / NVIDIA-MD on
+            CUDA) and free-energy perturbation (FEP) on the model-proposed
+            ligand poses, using the simulations as a hard gate before any
+            molecule reaches a robotic synthesis platform. This step alone
+            culls roughly half of the generative-model output that would
+            otherwise burn lab cycles.
+          </li>
+          <li>
+            <b>Multimodal foundation-model retraining signals.</b> I integrated
+            vision-transformer and scGPT-derived embeddings of pathology,
+            fluorescence-microscopy, and single-cell-RNA-seq readouts as
+            <em>multimodal retraining signals</em> for the upstream generative
+            models - so that downstream phenotypic and transcriptomic
+            outcomes, not only docking scores, shape the next round of
+            molecular proposals.
+          </li>
+          <li>
+            <b>Digital-twin orchestration of the wet lab.</b> I helped wire
+            the loop into
+            <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener noreferrer">NVIDIA Omniverse</a>
+            digital twins of the physical laboratory, with video-language
+            models monitoring assay state in real time and the
+            <a href="https://developer.nvidia.com/isaac/healthcare" target="_blank" rel="noopener noreferrer">Isaac for Healthcare</a>
+            robotics stack executing the protocols proposed by the agentic
+            planner. The simulated twin validates protocols before
+            autonomous execution on the physical platform.
+          </li>
+        </ul>
+        <figure class="proj-figure">
+          <img src="../assets/figures/nvidia-litl.png" alt="Key figure for nvidia-litl"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fig-placeholder" style="display:none;">
+            Drop the key figure at <code>assets/figures/nvidia-litl.png</code>
+          </div>
+          <figcaption>SE(3)-equivariant rigid-body protein-protein docking pipeline: independent graph processing of receptor and ligand, multi-head attention over binding-pocket keypoints, and Kabsch-aligned rigid-transform readout giving a single-shot complex with no candidate-pose sampling or templates. Figure from <a href="https://arxiv.org/abs/2111.07786" target="_blank" rel="noopener noreferrer">Ganea et al., 2022 — EquiDock (ICLR)</a>, the structure-prediction backbone used inside this lab-in-the-loop stack.</figcaption>
+        </figure>
+
+        <a class="proj-back" href="../#research">← Research</a>
+      </article>
+
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

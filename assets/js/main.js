@@ -4,8 +4,9 @@
   var SVG_NS = "http://www.w3.org/2000/svg";
 
   // ── Project metadata ────────────────────────────────────────────────────
-  // First 6 are chip nodes (handgraph). Last 2 are research-page cards only.
+  // All entries map 1:1 to chip nodes (handgraph).
   var PROJECTS = [
+    { id: "nvidia-litl",      glyph: "helix",    label: "Lab-in-the-Loop AI for Life Sciences",href: "projects/nvidia-litl.html",          tone: 3 },
     { id: "betting-kernels",  glyph: "stats",    label: "Statistics for ML",                   href: "projects/betting-kernels.html",      tone: 1 },
     { id: "aim-medical",      glyph: "leaf",     label: "Foundation Models for Life Sciences", href: "projects/aim-medical.html",          tone: 3 },
     { id: "caisi",            glyph: "tau",      label: "Mech Interp · Neurodegeneration",     href: "projects/caisi.html",                tone: 2 },
@@ -73,6 +74,13 @@
       [[-7,-6],[7,-6],[-6,7],[6,7]].forEach(function (p) {
         f.appendChild(el("line", { class: "c-icon-path", x1: 0, y1: 0, x2: p[0], y2: p[1] }));
         f.appendChild(el("circle", { class: "c-icon-dot", cx: p[0], cy: p[1], r: 1.7 }));
+      });
+    } else if (glyph === "helix") {
+      // Double helix (bio / lab-in-the-loop): two sine strands + base-pair rungs
+      f.appendChild(el("path", { class: "c-icon-path", d: "M-9,-10 C-3,-7 3,-7 9,-10 C3,-3 -3,-3 -9,4 C-3,7 3,7 9,4 C3,10 -3,10 -9,10" }));
+      f.appendChild(el("path", { class: "c-icon-path", d: "M9,-10 C3,-7 -3,-7 -9,-10 C-3,-3 3,-3 9,4 C-3,7 3,7 -9,4 C3,10 -3,10 9,10" }));
+      [-6, -2, 2, 6].forEach(function (y) {
+        f.appendChild(el("line", { class: "c-icon-path", x1: -5, y1: y, x2: 5, y2: y }));
       });
     } else if (glyph === "D") {
       var td = el("text", { class: "c-icon", y: 2, style: "font-family:Fraunces,serif;font-style:italic;" }); td.textContent = "D";
@@ -625,8 +633,8 @@
   // ── CANDIDATE B - Slow rotation + breathing radius ─────────────────────
   function initBreathingRing(svg, labelEl) {
     if (!svg) return;
-    var projects = PROJECTS.slice(0, 8);
-    var CX = 200, CY = 165, BASE_R = 108, N = 8;
+    var projects = PROJECTS.slice(0, 9);
+    var CX = 200, CY = 165, BASE_R = 108, N = 9;
 
     var outline = el("polygon", { class: "morph-outline" });
     svg.appendChild(outline);
