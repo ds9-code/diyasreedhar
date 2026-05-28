@@ -7,6 +7,7 @@
   // All entries map 1:1 to chip nodes (handgraph).
   var PROJECTS = [
     { id: "nvidia-litl",      glyph: "helix",    label: "Lab-in-the-Loop AI for Life Sciences",href: "projects/nvidia-litl.html",          tone: 3 },
+    { id: "proton",           glyph: "kg",       label: "Graph AI for Drug Repurposing",       href: "projects/proton.html",               tone: 2 },
     { id: "betting-kernels",  glyph: "stats",    label: "Statistics for ML",                   href: "projects/betting-kernels.html",      tone: 1 },
     { id: "aim-medical",      glyph: "leaf",     label: "Foundation Models for Life Sciences", href: "projects/aim-medical.html",          tone: 3 },
     { id: "caisi",            glyph: "tau",      label: "Mech Interp · Neurodegeneration",     href: "projects/caisi.html",                tone: 2 },
@@ -74,6 +75,16 @@
       [[-7,-6],[7,-6],[-6,7],[6,7]].forEach(function (p) {
         f.appendChild(el("line", { class: "c-icon-path", x1: 0, y1: 0, x2: p[0], y2: p[1] }));
         f.appendChild(el("circle", { class: "c-icon-dot", cx: p[0], cy: p[1], r: 1.7 }));
+      });
+    } else if (glyph === "kg") {
+      // Knowledge-graph hub-and-spokes (heterogeneous graph transformer)
+      f.appendChild(el("circle", { class: "c-icon-dot", cx: 0, cy: 0, r: 2.4 }));
+      [
+        [0, -9], [8, -5], [9, 2], [5, 8], [-5, 8],
+        [-9, 2], [-8, -5]
+      ].forEach(function (p) {
+        f.appendChild(el("line", { class: "c-icon-path", x1: 0, y1: 0, x2: p[0], y2: p[1] }));
+        f.appendChild(el("circle", { class: "c-icon-dot", cx: p[0], cy: p[1], r: 1.6 }));
       });
     } else if (glyph === "helix") {
       // Double helix (bio / lab-in-the-loop): two sine strands + base-pair rungs
@@ -633,8 +644,8 @@
   // ── CANDIDATE B - Slow rotation + breathing radius ─────────────────────
   function initBreathingRing(svg, labelEl) {
     if (!svg) return;
-    var projects = PROJECTS.slice(0, 9);
-    var CX = 200, CY = 165, BASE_R = 108, N = 9;
+    var projects = PROJECTS.slice(0, 10);
+    var CX = 200, CY = 165, BASE_R = 108, N = 10;
 
     var outline = el("polygon", { class: "morph-outline" });
     svg.appendChild(outline);

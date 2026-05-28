@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Graph AI for Neurological Drug Repurposing · Diya Sreedhar</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../" class="nav-brand">Diya Sreedhar</a>
+      <div class="nav-links">
+        <a href="../#research" class="is-current">Research</a>
+        <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../academic-background.html">Background</a>
+        <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="project-hero">
+        <h1>Graph AI for Neurological Drug Repurposing</h1>
+        <aside class="project-hero-anim">
+          <div class="chip-wrap chip-wrap-sm">
+            <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
+            <p class="chip-label">Explore Research</p>
+          </div>
+        </aside>
+      </header>
+
+      <article class="project-body">
+        <p>
+          At the
+          <a href="https://kempnerinstitute.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard Kempner Institute for the Study of Natural and Artificial Intelligence</a>,
+          I contributed to
+          <a href="https://www.protonmodel.ai/" target="_blank" rel="noopener noreferrer">PROTON</a>
+          (<a href="https://github.com/mims-harvard/PROTON" target="_blank" rel="noopener noreferrer">mims-harvard/PROTON</a>),
+          a 578-million-parameter heterogeneous graph transformer trained on
+          NeuroKG - a brain-biology knowledge graph integrating 36 human
+          datasets, 147,020 nodes across 16 entity types, 7.4&nbsp;million
+          edges across 47 relation types, and 3.76&nbsp;million single-nucleus
+          RNA-seq cells from the adult human brain. PROTON generates
+          drug-repurposing hypotheses that have now been validated in
+          molecular, organoid, and clinical systems.
+          (<a href="https://arxiv.org/abs/2512.13724" target="_blank" rel="noopener noreferrer">arXiv:2512.13724</a>.)
+        </p>
+
+        <ul>
+          <li>
+            <b>Heterogeneous graph transformer at scale.</b> PROTON learns
+            node embeddings for every entity type in NeuroKG - genes,
+            proteins, cell types, brain regions, phenotypes, drugs - via
+            node- and edge-type-aware multi-head attention with
+            self-supervised <em>link prediction</em>. After Bayesian
+            hyperparameter optimization, the model reaches
+            AUROC = 0.9145 (accuracy = 82.23%) on a held-out test set.
+          </li>
+          <li>
+            <b>Parkinson's disease - genome-wide α-synuclein experiments.</b>
+            PROTON reproduces the findings of six independent
+            α-synuclein-pathology screens with normalized enrichment scores
+            up to 2.30 (FDR &lt; 1×10<sup>-4</sup>). Its pesticide
+            predictions land in the top 6.75% of an ascertainment-bias
+            sensitivity analysis on a 496-patient case-control cohort
+            (NES = 2.13, FDR &lt; 1×10<sup>-4</sup>).
+          </li>
+          <li>
+            <b>Bipolar disorder - patient-derived cortical organoids.</b>
+            On a disease-centric split that withheld all drug information,
+            PROTON nominated calcitriol; in patient-derived cortical
+            organoids it reversed proteomic alterations across
+            73 dysregulated proteins, with effects distinct from those of
+            existing BD treatments.
+          </li>
+          <li>
+            <b>Alzheimer's disease - 610,524 patients.</b> Of the model's
+            top predicted drugs, retrospective analysis of 610,524
+            Mass General Brigham patient records associated five with
+            reduced seven-year dementia risk (minimum hazard ratio 0.63,
+            p &lt; 1×10<sup>-7</sup>), surviving multiple-comparison
+            correction.
+          </li>
+          <li>
+            <b>Open release.</b> Model weights are released through Hugging
+            Face, NeuroKG through Harvard Dataverse
+            (DOI 10.7910/DVN/ZDLS3K), and source under MIT license at
+            <a href="https://github.com/mims-harvard/PROTON" target="_blank" rel="noopener noreferrer">mims-harvard/PROTON</a>.
+          </li>
+        </ul>
+        <figure class="proj-figure">
+          <img src="../assets/figures/proton.png" alt="Key figure for PROTON"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fig-placeholder" style="display:none;">
+            Drop the key figure at <code>assets/figures/proton.png</code>
+          </div>
+          <figcaption>UMAP of PROTON embeddings projected from the 578M-parameter heterogeneous graph transformer. The learned latent space cleanly separates 12 biomedical entity types - gene / protein, drug, cell type, brain region, phenotype, anatomy, biological process, molecular function, pathway, exposure, disease - so that downstream link-prediction queries operate on a structurally meaningful representation. Figure from PROTON Supplementary Figure 1 (<a href="https://arxiv.org/abs/2512.13724" target="_blank" rel="noopener noreferrer">Noori et al., 2025</a>).</figcaption>
+        </figure>
+
+        <a class="proj-back" href="../#research">← Research</a>
+      </article>
+
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
