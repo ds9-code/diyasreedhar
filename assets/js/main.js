@@ -11,7 +11,7 @@
     { id: "betting-kernels",  glyph: "stats",    label: "Statistics for ML",                   href: "projects/betting-kernels.html",      tone: 1 },
     { id: "fdgm",             glyph: "peak",     label: "Foundations of Deep Generative Models",href: "projects/fdgm.html",                 tone: 4 },
     { id: "aim-medical",      glyph: "leaf",     label: "Foundation Models for Life Sciences", href: "projects/aim-medical.html",          tone: 3 },
-    { id: "caisi",            glyph: "tau",      label: "Mech Interp · Neurodegeneration",     href: "projects/caisi.html",                tone: 2 },
+    { id: "caisi",            glyph: "tau",      label: "AI Biosecurity Evaluation",           href: "projects/caisi.html",                tone: 2 },
     { id: "nasa-lspace",      glyph: "atom",     label: "Density Functional Theory",           href: "projects/nasa-lspace.html",          tone: 4 },
     { id: "aws-neurips",      glyph: "chip",     label: "Electrical Engineering for AI",       href: "projects/aws-neurips.html",          tone: 1 },
     { id: "polymer",          glyph: "polymer",  label: "Polymer Sciences",                    href: "projects/polymer.html",              tone: 3 },

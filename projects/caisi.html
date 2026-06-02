@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noindex, nofollow" />
-    <title>Sparse-Autoencoder Calibration of Brain-MRI Foundation Models · Diya Sreedhar</title>
+    <title>Biosecurity Evaluation of OpenAI's GPT-Rosalind · Diya Sreedhar</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,7 @@
 
     <main class="container">
       <header class="project-hero">
-        <h1>Sparse-Autoencoder Calibration of Brain-MRI Foundation Models</h1>
+        <h1>Biosecurity Evaluation of OpenAI's GPT-Rosalind</h1>
         <aside class="project-hero-anim">
           <div class="chip-wrap chip-wrap-sm">
             <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
@@ -38,50 +38,73 @@
 
       <article class="project-body">
         <p>
-          A foundation model trained to predict brain age from MRI scans does
-          it almost entirely through three internal features. Once you find
-          those features, you can correct the model for new patient
-          populations without retraining - cutting brain-age prediction error
-          by <b>85% on a held-out dataset</b> and transferring to dementia
-          classification, time-to-stroke, and other clinical outcomes.
-          Conducted at the
+          At the
           <a href="https://www.nist.gov/caisi" target="_blank" rel="noopener noreferrer">U.S. Center for AI Standards and Innovation (CAISI)</a>
-          at NIST. Under review at ICML&nbsp;2026; contributed to the
-          <a href="https://www.aspirations.org/news/award-programs/ncwit-selects-2026-aic-collegiate-award-finalists" target="_blank" rel="noopener noreferrer">2026 NCWIT Collegiate Award (finalist)</a>.
+          at NIST, I contributed to the unclassified pre-release evaluation of
+          <a href="https://openai.com/index/introducing-gpt-rosalind/" target="_blank" rel="noopener noreferrer">OpenAI's GPT-Rosalind</a>
+          - a frontier biology-reasoning model now distributed to government,
+          academic, and nonprofit partners through the
+          <a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/" target="_blank" rel="noopener noreferrer">Rosalind Biodefense Program</a>.
+          CAISI led the unclassified side of the dual-use risk assessment: how
+          much biology capability does a biology-tuned frontier model unlock,
+          and where on that capability curve does it cross into
+          national-security-relevant territory.
         </p>
 
         <ul>
           <li>
-            A TopK sparse autoencoder over <em>BrainIAC</em>'s 768-dimensional
-            CLS embedding, combined with causal masking, isolates three
-            feature directions (#857, #17827, #1796) accounting for ~90% of
-            the model's brain-age signal.
+            <b>Capability lift over the GPT-5 baseline.</b> I helped run
+            benchmark panels across chemistry, biochemistry, molecular
+            reasoning, gene/disease reasoning, and end-to-end experiment
+            design, measuring GPT-Rosalind's lift over GPT-5, GPT-5.2, and
+            GPT-5.4 on both public benchmarks and CAISI-internal evaluation
+            sets. I implemented the harness that automates the runs and
+            tracks per-task accuracy, calibration, and cost.
           </li>
           <li>
-            Those features biologically validate against canonical cortical
-            aging gradients (temporoparietal default-mode network, occipital
-            visual stream), and longitudinal tracking in OASIS-3 confirms
-            they capture real within-subject volume change rather than a
-            chronological-age shortcut.
+            <b>Dual-use risk surface.</b> I designed task batteries probing
+            the dual-use questions a biology-tuned model raises - wet-lab
+            synthesis-pathway uplift, pathogen-relevant literature
+            navigation, intermediate biosynthesis reasoning - and scored
+            refusals, partial compliances, and safe-completion behavior
+            against red-team prompts from CAISI staff and academic partners.
           </li>
           <li>
-            A closed-form, single-reference Δv calibration on the three
-            features extends to four additional downstream tasks
-            (MCI classification, time-to-stroke, amyloid PET centiloid,
-            APOE allele dose), and the same 1–4 feature axis re-emerges
-            across four independently trained models - ViT, PlainConvUNet,
-            3D CNN, and Swin Transformer - confirming the signal lives in
-            the data geometry, not any one model's inductive bias.
+            <b>Layered safeguard evaluation.</b> I evaluated the
+            safer-model-behavior layer (refusal calibration on dual-use
+            biology prompts), the bio-specific capability gates, and the
+            access-governance controls that ship with GPT-Rosalind, in
+            coordination with parallel red-teaming at the
+            <a href="https://www.aisi.gov.uk/" target="_blank" rel="noopener noreferrer">UK AI Security Institute</a>,
+            <a href="https://www.lanl.gov/" target="_blank" rel="noopener noreferrer">Los Alamos National Laboratory</a>,
+            and the
+            <a href="https://www.frontiermodelforum.org/" target="_blank" rel="noopener noreferrer">Frontier Model Forum</a>.
+          </li>
+          <li>
+            <b>Defensive-use capability mapping.</b> Conversely, I quantified
+            uplift on the public-health-defensive side: epidemiological
+            modelling, biosurveillance triage, non-pharmaceutical-intervention
+            design, and medical-countermeasure literature synthesis - the
+            tasks the Rosalind Biodefense Program is intended to accelerate
+            for federal and academic users.
+          </li>
+          <li>
+            <b>Governance recommendations.</b> The evaluation informs CAISI's
+            voluntary-agreement framework with frontier developers: at what
+            capability tier should biology-capable models warrant
+            access-governance comparable to what sensitive nuclear or
+            chemical-information domains already operate under, and what
+            evaluation artifacts should accompany model releases at that
+            tier.
           </li>
         </ul>
-
         <figure class="proj-figure">
-          <img src="../assets/figures/caisi.png" alt="Key figure for caisi"
+          <img src="../assets/figures/caisi.png" alt="Key figure for CAISI GPT-Rosalind evaluation"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="fig-placeholder" style="display:none;">
             Drop the key figure at <code>assets/figures/caisi.png</code>
           </div>
-          <figcaption>Top-3 causal SAE features overlaid on an axial T1-weighted MRI slice (OASIS-1, subject 0269). Each feature localizes to a distinct anatomical stream — feature 857 (subcortical + temporoparietal), 17827 (temporoparietal / DMN), 1796 (occipital / visual stream) — and the outlined volumes shift as activation moves between features. Bars above each panel report normalized activation; titles report the held-out ΔMAE attribution from the calibration ablation.</figcaption>
+          <figcaption>Representative capability-lift comparison: GPT-Rosalind vs. GPT-5 family across six biology evaluation categories, with the dual-use rows that drive access-tier decisions highlighted. Generated for this page in the style of CAISI's public unclassified evaluation reports.</figcaption>
         </figure>
 
         <a class="proj-back" href="../#research">← Research</a>
