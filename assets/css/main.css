@@ -1760,7 +1760,7 @@ h3 {
    ──────────────────────────────────────────────────────────────── */
 
 .cv-container {
-  max-width: 1080px;
+  max-width: 1400px;
   padding-top: 64px;
   padding-bottom: 120px;
   font-family: var(--sans);
@@ -1815,10 +1815,10 @@ h3 {
 /* Row: date left, body right (matheus layout) */
 .cv-row {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  column-gap: 24px;
+  grid-template-columns: 200px 1fr;
+  column-gap: 40px;
   align-items: baseline;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 
 .cv-row-date {
