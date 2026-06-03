@@ -1806,15 +1806,15 @@ h3 {
 .cv-section { margin: 0 0 36px; }
 
 .cv-container .cv-section-title {
-  font-family: var(--sans);
-  font-size: 11px;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 30px);
   font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin: 0 0 16px;
-  padding: 0 0 8px;
-  border-bottom: 1px solid var(--rule);
+  letter-spacing: -0.015em;
+  text-transform: none;
+  color: var(--accent);
+  margin: 0 0 20px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 28%, var(--rule));
   display: block;
 }
 
@@ -1977,6 +1977,18 @@ h3 {
 /* Smooth scroll for anchor jumps; offset accounts for sticky navbar */
 html { scroll-behavior: smooth; }
 .cv-section { scroll-margin-top: 80px; }
+
+
+.cv-star {
+  display: inline-block;
+  color: #e0a51d;
+  font-size: 14px;
+  line-height: 1;
+  margin-right: 6px;
+  vertical-align: 1px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+.cv-row-role .cv-star { font-size: 14px; }
 
 @media (max-width: 960px) {
   .cv-container { grid-template-columns: 1fr; column-gap: 0; }
