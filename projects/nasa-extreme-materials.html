@@ -39,115 +39,38 @@
       <article class="project-body">
         <p>
           Through the
-          <a href="https://www.lspace.asu.edu/" target="_blank" rel="noopener noreferrer">NASA L'SPACE (Lucy Student Pipeline Accelerator and Competency Enabler)</a>
-          program, I led the materials-design track of a mission concept proposing
-          extreme-environment coatings for crewed spacesuit and structural
-          spaceship surfaces. The stakes are well documented: NASA's
-          <a href="https://ntrs.nasa.gov/api/citations/20090015239/downloads/20090015239.pdf" target="_blank" rel="noopener noreferrer">TP-2009-214786 Lunar Dust Effects on Spacesuit Systems</a>
-          report found that <b>the three EVAs of the final Apollo mission damaged
-          the outer fabric of the suits beyond what additional EVAs could
-          tolerate</b>, and the
-          <a href="https://www.nasa.gov/general/artemis-program-spacesuit-axemu-tech/" target="_blank" rel="noopener noreferrer">Artemis xEMU/AxEMU programs</a>
-          target much longer surface operations on a regolith- and
-          atomic-oxygen-rich service envelope. The work combined
-          <a href="https://thermocalc.com/" target="_blank" rel="noopener noreferrer">CALPHAD</a>-guided
-          alloy and ceramic phase prediction with high-throughput tribological
-          and microstructural characterization to nominate coating systems
-          that survive the LEO-to-lunar envelope. As a brief summary of my
-          research:
+          <a href="https://www.lspace.asu.edu/" target="_blank" rel="noopener noreferrer">NASA L'SPACE</a>
+          program, I led the materials-design track of a mission concept
+          proposing extreme-environment coatings for crewed spacesuit and
+          structural spaceship surfaces - a regime where the Apollo suits'
+          outer fabric was damaged past further use after only three EVAs
+          <a href="https://ntrs.nasa.gov/api/citations/20090015239/downloads/20090015239.pdf" target="_blank" rel="noopener noreferrer">(NASA TP-2009-214786)</a>,
+          and where Artemis-class missions demand far longer surface
+          operations.
         </p>
 
         <ul>
           <li>
-            <b>The environment we're designing against.</b> The lunar equatorial
-            surface swings from
-            <a href="https://www.lpi.usra.edu/lunar/strategies/resources/Colozza_NASA-CR-189073_1991_LunarRegolithThermalEnergyStorage.pdf" target="_blank" rel="noopener noreferrer">~398 K (125 °C) at noon to ~96 K (-177 °C) at night</a>
-            -- a 300 °C peak-to-peak thermal cycle that opens
-            <a href="https://www.electronics-cooling.com/2026/01/spacecraft-thermal-control-in-extreme-environments-surviving-lunar-night-and-martian-dust/" target="_blank" rel="noopener noreferrer">&gt;200 °C gradients across a few millimeters of shadow</a>.
-            Permanently shadowed regions sit near 20 K. Above LEO,
-            <a href="https://ntrs.nasa.gov/api/citations/20070002707/downloads/20070002707.pdf" target="_blank" rel="noopener noreferrer">NASA's MISSE PEACE Polymers experiment</a>
-            measured atomic-oxygen erosion yields of 41 polymers on the ISS
-            exterior; Kapton H -- the spacecraft benchmark -- erodes at
-            <b>3 &times; 10<sup>-24</sup> cm<sup>3</sup>/atom</b>. The
-            coating envelope we shortlisted had to survive both regimes.
-          </li>
-          <li>
-            <b>CALPHAD-guided alloy and ceramic design.</b> I screened
-            candidate chemistries with
-            <a href="https://thermocalc.com/" target="_blank" rel="noopener noreferrer">Thermo-Calc</a>
-            and
-            <a href="https://computherm.com/pandat/" target="_blank" rel="noopener noreferrer">Pandat</a>
-            CALPHAD databases for phase equilibria, transformation pathways,
-            and sintering behavior across the LEO-to-lunar temperature window.
-            The pass shortlisted ~40 candidate systems from a several-hundred
-            initial pool, biased toward phases that stay structurally stable
-            under repeated thermal cycling and resist atomic-oxygen-driven
-            oxidation. The reference point for "what the field already has"
-            was
+            <b>CALPHAD-guided coating design.</b> Screened candidate alloy
+            and ceramic chemistries with Thermo-Calc and Pandat for phase
+            equilibria, sintering, and stability across the LEO-to-lunar
+            thermal window (~398 K day to ~96 K night). Benchmarked against
             <a href="https://www.nasa.gov/aeronautics/nasa-glenns-grx-810-alloy/" target="_blank" rel="noopener noreferrer">NASA Glenn's GRX-810</a>
-            -- a Co-Cr-Ni medium-entropy ODS alloy that, in
-            <a href="https://ntrs.nasa.gov/api/citations/20240000067/downloads/AIAA%20GRX-810%20Dev%20and%20Hotfire_2024.pdf" target="_blank" rel="noopener noreferrer">NASA's own characterization</a>,
-            delivers <b>~2x strength at 1,100 °C and ~1,000x longer creep life
-            than the prior nickel-superalloy baseline</b>, plus 2x oxidation
-            resistance and 4x ductility, and was licensed to Linde AMT in 2024.
+            (2× strength at 1,100 °C, ~1,000× creep-life baseline).
           </li>
           <li>
-            <b>Nanoindentation and tribological characterization.</b> I built a
-            high-throughput nanoindentation protocol resolving hardness,
-            elastic modulus, and wear rate across both thin-film and bulk
-            samples in a single sample-mounting pass, cutting characterization
-            wall-clock by roughly 3x. Coupled to pin-on-disc tribometry, the
-            protocol returned per-candidate Archard wear coefficients and
-            adhesion-failure thresholds that fed back into the CALPHAD
-            shortlist. The acceptance bar borrowed from the
-            <a href="https://www.lpi.usra.edu/lunar/strategies/Mitchell_AIAApaper_LunarEVASpacesuitAbrasionTests.pdf" target="_blank" rel="noopener noreferrer">NASA EVA Technology Development Program's 2008 abrasion protocol</a>,
-            which benchmarked candidate EVA fabrics against samples of
-            Alan Bean's Apollo 12 suit.
+            <b>High-throughput tribology.</b> Built a nanoindentation +
+            pin-on-disc protocol resolving hardness, modulus, Archard wear
+            coefficient, and adhesion-failure threshold in a single
+            sample-mounting pass.
           </li>
           <li>
-            <b>Microstructural analysis of degraded surfaces.</b> I used SEM,
-            TEM, EBSD, XRD, and optical microscopy to characterize
-            as-deposited coatings and to map the evolution of grain-boundary
-            chemistry and phase distribution after accelerated corrosion and
-            abrasive-wear exposures. EBSD identified which grain-boundary
-            populations preferentially nucleated corrosion-driven microcracks,
-            informing a downstream texture-control intervention on the leading
-            candidate. The mode of failure I was targeting is the one NASA
-            documented on the Apollo 12 ITMG T-164 Teflon outer fabric (see
-            figure below): regolith particles wedged between fibers, prying
-            them apart and fraying individual filaments
-            <a href="https://ntrs.nasa.gov/api/citations/20090015239/downloads/20090015239.pdf" target="_blank" rel="noopener noreferrer">(Christoffersen et al., NASA TP-2009-214786)</a>.
-          </li>
-          <li>
-            <b>Mission-relevant performance outcomes.</b> The resulting
-            coating shortlist delivered measurable improvements over the
-            Apollo-era beta-cloth and Teflon baselines on the metrics that
-            dominate spacesuit and structural-spaceship durability: reduced
-            wear rate under regolith-like abrasion, increased
-            corrosion-resistance margin under simulated atomic-oxygen
-            exposure, and stable hardness across thermal-cycle counts
-            representative of an extended Artemis-class lunar surface
-            mission.
+            <b>Microstructural analysis.</b> SEM, TEM, EBSD, XRD, and optical
+            microscopy on degraded surfaces to map grain-boundary chemistry
+            and identify the populations nucleating corrosion-driven
+            microcracks.
           </li>
         </ul>
-        <figure class="proj-figure">
-          <img src="../assets/figures/nasa-extreme-materials.png?v=1" alt="SEM images of abraded Apollo 12 ITMG T-164 Teflon outer fabric, from NASA TP-2009-214786"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="fig-placeholder" style="display:none;">
-            Drop the key figure at <code>assets/figures/nasa-extreme-materials.png?v=1</code>
-          </div>
-          <figcaption>
-            Secondary-electron SEM images of the outermost Apollo 12 ITMG T-164
-            Teflon abrasion fabric from an exposed area on the left shoulder,
-            adjacent to a region that was covered by a flag patch. Lunar
-            regolith particles separated and frayed individual Teflon fibers
-            during just three EVAs, leaving the suit unfit for additional
-            surface operations. <i>Figure 10, NASA TP-2009-214786:
-            Christoffersen, Lindsay, Noble, Lawrence, Hutchison &amp; McKay,
-            "Lunar Dust Effects on Spacesuit Systems: Insights from the
-            Apollo Spacesuits," 2009.</i>
-          </figcaption>
-        </figure>
 
         <a class="proj-back" href="../#research">← Research</a>
       </article>
