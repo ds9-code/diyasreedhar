@@ -1803,7 +1803,7 @@ h3 {
 }
 
 /* Section */
-.cv-section { margin: 0 0 36px; }
+.cv-section { margin: 0 0 24px; }
 
 .cv-container .cv-section-title {
   font-family: var(--serif);
@@ -1812,8 +1812,8 @@ h3 {
   letter-spacing: -0.015em;
   text-transform: none;
   color: var(--accent);
-  margin: 0 0 20px;
-  padding: 0 0 12px;
+  margin: 0 0 14px;
+  padding: 0 0 10px;
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 28%, var(--rule));
   display: block;
 }
@@ -1824,12 +1824,12 @@ h3 {
   grid-template-columns: 200px 1fr;
   column-gap: 40px;
   align-items: baseline;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .cv-row-date {
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 400;
   color: var(--ink-muted);
   letter-spacing: 0;
@@ -1841,7 +1841,7 @@ h3 {
 .cv-row-affil {
   display: block;
   font-family: var(--sans);
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-style: italic;
   font-weight: 400;
   color: var(--ink-muted);
@@ -1852,8 +1852,8 @@ h3 {
 .cv-row-body {
   display: block;
   font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 17px;
+  line-height: 1.5;
   color: var(--ink-soft);
 }
 
@@ -1875,7 +1875,7 @@ h3 {
   display: block;
   font-style: italic;
   font-weight: 400;
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--ink-soft);
   margin-top: 1px;
 }
@@ -1883,9 +1883,9 @@ h3 {
 .cv-row-desc {
   display: block;
   font-weight: 400;
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--ink-muted);
-  margin-top: 2px;
+  margin-top: 1px;
 }
 .cv-row-desc a, .cv-row-sub a {
   color: var(--accent);
@@ -1901,13 +1901,13 @@ h3 {
   padding: 0 0 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 32px;
-  row-gap: 4px;
+  column-gap: 36px;
+  row-gap: 6px;
 }
 .cv-awards li {
   font-family: var(--sans);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 15.5px;
+  line-height: 1.45;
   color: var(--ink-soft);
   padding-left: 14px;
   position: relative;
@@ -1951,7 +1951,7 @@ h3 {
 .cv-toc li { margin: 0; }
 .cv-toc-link {
   display: block;
-  padding: 12px 18px;
+  padding: 10px 18px;
   font-family: var(--sans);
   font-size: 16px;
   font-weight: 500;
