@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="googlebot" content="noindex, nofollow" />
     <title>CV · Diya Sreedhar</title>
-    <link rel="stylesheet" href="assets/css/main.css?v=21" />
+    <link rel="stylesheet" href="assets/css/main.css?v=22" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -98,91 +98,123 @@
       </section>
 
       <!-- RESEARCH -->
-      <section class="cv-section" id="research">
+      <section class="cv-section" id="research" data-filter="all">
         <h2 class="cv-section-title">Research</h2>
 
-        <div class="cv-row">
-          <div class="cv-row-date">2026<span class="cv-row-affil">CAISI · UK AISI</span></div>
+        <div class="cv-filter" role="tablist" aria-label="Filter research by area">
+          <button class="cv-filter-btn is-active" data-filter="all" type="button">All</button>
+          <button class="cv-filter-btn" data-filter="bio" type="button"><span class="cv-area-dot cv-area-dot--bio"></span>AI for Biology</button>
+          <button class="cv-filter-btn" data-filter="materials" type="button"><span class="cv-area-dot cv-area-dot--materials"></span>Materials Science</button>
+          <button class="cv-filter-btn" data-filter="math" type="button"><span class="cv-area-dot cv-area-dot--math"></span>Math &amp; Robotics</button>
+          <button class="cv-filter-btn" data-filter="safety" type="button"><span class="cv-area-dot cv-area-dot--safety"></span>AI Safety &amp; Evals</button>
+        </div>
+
+        <div class="cv-row" data-area="safety">
+          <div class="cv-row-date">2026<span class="cv-row-affil">CAISI · UK AISI</span><span class="cv-area cv-area--safety">AI Safety</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">InspectAI: A Framework for LLM Evaluation</span>
             <span class="cv-row-desc">Jailbreaking and elicitation environment for testing frontier LLMs. [<a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" rel="noopener noreferrer">GitHub</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date">2025<span class="cv-row-affil">CAISI</span></div>
+        <div class="cv-row" data-area="safety">
+          <div class="cv-row-date">2025<span class="cv-row-affil">CAISI</span><span class="cv-area cv-area--safety">AI Safety</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Evaluation of DeepSeek AI Models</span>
             <span class="cv-row-desc">3 DeepSeek vs. 4 U.S. frontier models across 19 cyber, reasoning, and censorship evals. [<a href="https://www.nist.gov/system/files/documents/2025/09/30/CAISI_Evaluation_of_DeepSeek_AI_Models.pdf" target="_blank" rel="noopener noreferrer">PDF</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date">2026<span class="cv-row-affil">CAISI</span></div>
+        <div class="cv-row" data-area="bio">
+          <div class="cv-row-date">2026<span class="cv-row-affil">CAISI</span><span class="cv-area cv-area--bio">AI for Bio</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Biosecurity Evaluation of OpenAI's GPT-Rosalind</span>
             <span class="cv-row-desc">Unclassified pre-release biology-capability and dual-use risk evaluation. [<a href="projects/caisi.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date is-starred">ICML 2026<span class="cv-row-affil">Harvard Kempner Institute</span></div>
+        <div class="cv-row" data-area="math">
+          <div class="cv-row-date is-starred">ICML 2026<span class="cv-row-affil">Harvard Kempner Institute</span><span class="cv-area cv-area--math">Math &amp; Robotics</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Anytime-Valid Two-Sample Testing over Kernel Families</span>
             <span class="cv-row-desc">First kernel-family two-sample test; ICML Hypothesis Testing workshop. [<a href="projects/betting-kernels.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date is-starred">ICML 2026<span class="cv-row-affil">Harvard Kempner Institute</span></div>
+        <div class="cv-row" data-area="math">
+          <div class="cv-row-date is-starred">ICML 2026<span class="cv-row-affil">Harvard Kempner Institute</span><span class="cv-area cv-area--math">Math &amp; Robotics</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Transient Capabilities and Head Repurposing in Autoregressive Transformers</span>
             <span class="cv-row-desc">Linked transient structural learning to repurposed early attention heads; FoGen workshop. [<a href="projects/fdgm.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date is-starred">CVPR 2026<span class="cv-row-affil">Harvard Medical School · AIM Lab</span></div>
+        <div class="cv-row" data-area="bio">
+          <div class="cv-row-date is-starred">CVPR 2026<span class="cv-row-affil">Harvard Medical School · AIM Lab</span><span class="cv-area cv-area--bio">AI for Bio</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Sparse-Autoencoder Calibration of Disease-Predicting Foundation Models</span>
             <span class="cv-row-desc">Inference-time feature calibration that lifts downstream tasks without retraining. [<a href="projects/aim-medical.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date">2025<span class="cv-row-affil">Harvard Kempner Institute</span></div>
+        <div class="cv-row" data-area="bio">
+          <div class="cv-row-date">2025<span class="cv-row-affil">NVIDIA Research</span><span class="cv-area cv-area--bio">AI for Bio</span></div>
+          <div class="cv-row-body">
+            <span class="cv-row-role">Lab-in-the-Loop AI for Life-Science Discovery</span>
+            <span class="cv-row-desc">CMA-ES guided MolMIM sampling + AlphaFold-Multimer docking inside NVIDIA's BioNeMo lab-in-the-loop stack. [<a href="projects/nvidia-litl.html">Project</a>]</span>
+          </div>
+        </div>
+
+        <div class="cv-row" data-area="bio">
+          <div class="cv-row-date">2025<span class="cv-row-affil">Harvard Kempner Institute</span><span class="cv-area cv-area--bio">AI for Bio</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Graph AI for Neurological Drug Repurposing (PROTON)</span>
             <span class="cv-row-desc">578M-param graph transformer; drug hypotheses validated for Parkinson's, BD, AD. [<a href="projects/proton.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date is-starred">NeurIPS 2025<span class="cv-row-affil">AGI House · AWS Trainium</span></div>
+        <div class="cv-row" data-area="math">
+          <div class="cv-row-date is-starred">NeurIPS 2025<span class="cv-row-affil">AGI House · AWS Trainium</span><span class="cv-area cv-area--math">Math &amp; Robotics</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Distributed Fine-Tuning on AWS Trainium Accelerators</span>
             <span class="cv-row-desc">Canonical PyTorch-on-Neuron fine-tuning notebook for the Build-on-Trainium workshop. [<a href="projects/aws-neurips.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date">2025<span class="cv-row-affil">U.S. Department of Defense · SERDP</span></div>
+        <div class="cv-row" data-area="materials">
+          <div class="cv-row-date">2025<span class="cv-row-affil">U.S. Department of Defense · SERDP</span><span class="cv-area cv-area--materials">Materials</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Machine-Learning Quantum Chemistry for PFAS Destruction</span>
             <span class="cv-row-desc">ML-accelerated DFT and single-atom Pt/SiC photocatalyst for C-F bond cleavage. [<a href="projects/materials-design.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date">Aug – Dec 2025<span class="cv-row-affil">NASA L'SPACE Program</span></div>
+        <div class="cv-row" data-area="materials">
+          <div class="cv-row-date">Aug – Dec 2025<span class="cv-row-affil">NASA L'SPACE Program</span><span class="cv-area cv-area--materials">Materials</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">Density Functional Theory for NASA's Lucy Mission</span>
             <span class="cv-row-desc">Catalyst-screening workflow; team proposal ranked 1st of 100. [<a href="projects/nasa-lspace.html">Project</a>]</span>
           </div>
         </div>
 
-        <div class="cv-row">
-          <div class="cv-row-date">2022 – 2023<span class="cv-row-affil">UPenn School of Medicine</span></div>
+        <div class="cv-row" data-area="materials">
+          <div class="cv-row-date">2024<span class="cv-row-affil">NIST Material Measurement Laboratory</span><span class="cv-area cv-area--materials">Materials</span></div>
+          <div class="cv-row-body">
+            <span class="cv-row-role">Coarse-Grained Polymer Models for Additive Manufacturing</span>
+            <span class="cv-row-desc">Contrastive-autoencoder CG potentials over LAMMPS MD; modeled PEEK/polyamide for medical-implant and aerospace 3D-printing. [<a href="projects/polymer.html">Project</a>]</span>
+          </div>
+        </div>
+
+        <div class="cv-row" data-area="materials">
+          <div class="cv-row-date">2024<span class="cv-row-affil">NIST Material Measurement Laboratory</span><span class="cv-area cv-area--materials">Materials</span></div>
+          <div class="cv-row-body">
+            <span class="cv-row-role">Active-Learning Molecular Dynamics for Standard Reference Materials</span>
+            <span class="cv-row-desc">VASP/CP2K ab initio MD + M3GNet potentials for transition-metal oxides and Ni-base alloys; fed the NIST SRM program. [<a href="projects/molecular-simulations.html">Project</a>]</span>
+          </div>
+        </div>
+
+        <div class="cv-row" data-area="bio">
+          <div class="cv-row-date">2022 – 2023<span class="cv-row-affil">UPenn School of Medicine</span><span class="cv-area cv-area--bio">AI for Bio</span></div>
           <div class="cv-row-body">
             <span class="cv-row-role">CNN Architectures for Meningioma MRI Analysis</span>
             <span class="cv-row-desc">Published in <i>Journal of Emerging Investigators</i> and IEEE; NVIDIA GTC presenter.</span>
@@ -473,5 +505,20 @@
     </main>
 
     <script src="assets/js/main.js?v=3"></script>
+    <script>
+      // Research area filter
+      (function(){
+        var research = document.getElementById('research');
+        if (!research) return;
+        var buttons = research.querySelectorAll('.cv-filter-btn');
+        buttons.forEach(function(btn){
+          btn.addEventListener('click', function(){
+            var f = btn.getAttribute('data-filter');
+            buttons.forEach(function(b){ b.classList.toggle('is-active', b === btn); });
+            research.setAttribute('data-filter', f);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

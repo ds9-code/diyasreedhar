@@ -2001,6 +2001,87 @@ html { scroll-behavior: smooth; }
 }
 
 
+/* Research area tags + filter chips */
+.cv-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+.cv-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 5px 13px;
+  cursor: pointer;
+  transition: background 0.15s var(--ease), color 0.15s var(--ease), border-color 0.15s var(--ease);
+}
+.cv-filter-btn:hover {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--rule));
+}
+.cv-filter-btn.is-active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.cv-filter-btn.is-active .cv-area-dot { box-shadow: 0 0 0 2px color-mix(in srgb, var(--bg) 60%, transparent); }
+
+.cv-area-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.cv-area-dot--bio       { background: #2f6b4a; }
+.cv-area-dot--materials { background: #b3791a; }
+.cv-area-dot--math      { background: #6b3a96; }
+.cv-area-dot--safety    { background: #2d6a8a; }
+
+.cv-area {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+.cv-area--bio {
+  color: #2f6b4a;
+  background: color-mix(in srgb, #2f6b4a 14%, transparent);
+}
+.cv-area--materials {
+  color: #8a5a14;
+  background: color-mix(in srgb, #b3791a 16%, transparent);
+}
+.cv-area--math {
+  color: #6b3a96;
+  background: color-mix(in srgb, #6b3a96 14%, transparent);
+}
+.cv-area--safety {
+  color: #2d6a8a;
+  background: color-mix(in srgb, #2d6a8a 14%, transparent);
+}
+
+/* Filter behavior — hide rows whose area doesn't match the active filter */
+#research[data-filter="bio"]       .cv-row:not([data-area="bio"])       { display: none; }
+#research[data-filter="materials"] .cv-row:not([data-area="materials"]) { display: none; }
+#research[data-filter="math"]      .cv-row:not([data-area="math"])      { display: none; }
+#research[data-filter="safety"]    .cv-row:not([data-area="safety"])    { display: none; }
+
+
 @media (max-width: 960px) {
   .cv-container { grid-template-columns: 1fr; column-gap: 0; }
   .cv-toc { display: none; }
