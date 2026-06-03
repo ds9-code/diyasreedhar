@@ -1990,6 +1990,17 @@ html { scroll-behavior: smooth; }
 }
 .cv-row-role .cv-star { font-size: 14px; }
 
+.cv-row-date.is-starred {
+  color: #c08e15;
+  font-weight: 700;
+}
+.cv-row-date.is-starred::before {
+  content: "★ ";
+  color: #e0a51d;
+  margin-right: 1px;
+}
+
+
 @media (max-width: 960px) {
   .cv-container { grid-template-columns: 1fr; column-gap: 0; }
   .cv-toc { display: none; }
