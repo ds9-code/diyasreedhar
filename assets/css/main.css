@@ -4,18 +4,20 @@
    ──────────────────────────────────────────────────────────────── */
 
 :root {
-  --bg: #f7f4ef;
-  --bg-elev: #fffdf8;
-  --ink: #1a1814;
-  --ink-soft: #4a463f;
-  --ink-muted: #847d72;
-  --rule: #e5dfd4;
-  --accent: #8b3a1f;
-  --accent-soft: #c47a5e;
-  --shadow: 0 1px 2px rgba(26, 24, 20, 0.04),
-    0 8px 24px -12px rgba(26, 24, 20, 0.12);
-  --shadow-lift: 0 2px 6px rgba(26, 24, 20, 0.06),
-    0 24px 48px -20px rgba(26, 24, 20, 0.2);
+  --bg: #ffffff;
+  --bg-elev: #f6f9fc;
+  --ink: #0e1419;
+  --ink-soft: #2d3a47;
+  --ink-muted: #6b7785;
+  --rule: #e3e8ef;
+  --accent: #6A89A7;
+  --accent-soft: #88BDF2;
+  --accent-tint: #BDDDFC;
+  --accent-strong: #384959;
+  --shadow: 0 1px 2px rgba(14, 20, 25, 0.04),
+    0 8px 24px -12px rgba(14, 20, 25, 0.10);
+  --shadow-lift: 0 2px 6px rgba(14, 20, 25, 0.06),
+    0 24px 48px -20px rgba(14, 20, 25, 0.18);
   --serif: "Fraunces", "Playfair Display", Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -23,14 +25,16 @@
 }
 
 html.dark {
-  --bg: #14130f;
-  --bg-elev: #1d1c17;
-  --ink: #f0ece2;
-  --ink-soft: #c2bdb0;
-  --ink-muted: #7d7669;
-  --rule: #2c2a23;
-  --accent: #d68a6c;
-  --accent-soft: #c47a5e;
+  --bg: #0d1419;
+  --bg-elev: #161d24;
+  --ink: #f0f4f8;
+  --ink-soft: #c5cdd6;
+  --ink-muted: #7e8896;
+  --rule: #232a32;
+  --accent: #88BDF2;
+  --accent-soft: #6A89A7;
+  --accent-tint: #1d3247;
+  --accent-strong: #BDDDFC;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
     0 8px 24px -12px rgba(0, 0, 0, 0.6);
   --shadow-lift: 0 2px 6px rgba(0, 0, 0, 0.5),
