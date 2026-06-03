@@ -1233,4 +1233,39 @@
   initLucyOrbit(document.getElementById("proj-anim-nasa-lspace"));
   initParallelChips(document.getElementById("proj-anim-aws-neurips"));
   initMedals(document.getElementById("proj-anim-isef-jshs"));
+
+  // ── CV table-of-contents scroll-spy ──────────────────────────────────────
+  (function () {
+    var toc = document.querySelector('.cv-toc');
+    if (!toc) return;
+    var links = Array.prototype.slice.call(toc.querySelectorAll('.cv-toc-link'));
+    var sections = links.map(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      return document.getElementById(id);
+    }).filter(Boolean);
+    if (!sections.length) return;
+
+    function update() {
+      var navOffset = 100; // sticky-navbar height + a little headroom
+      var activeIdx = 0;
+      for (var i = 0; i < sections.length; i++) {
+        var top = sections[i].getBoundingClientRect().top - navOffset;
+        if (top <= 0) activeIdx = i;
+        else break;
+      }
+      // If we are near the bottom of the page, force-select the last section
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        activeIdx = sections.length - 1;
+      }
+      links.forEach(function (a, i) {
+        if (i === activeIdx) a.classList.add('is-active');
+        else a.classList.remove('is-active');
+      });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
 })();
