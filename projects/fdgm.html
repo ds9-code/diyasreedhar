@@ -17,6 +17,7 @@
       <div class="nav-links">
         <a href="../#research" class="is-current">Research</a>
         <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../cv.html">CV</a>
         <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
           <span class="theme-icon">◐</span>
@@ -37,7 +38,6 @@
 
       <article class="project-body">
         <p>
-          With <a href="https://openreview.net/profile?id=~Juliana_Li1" target="_blank" rel="noopener noreferrer">Juliana&nbsp;Li</a>,
           I asked which capabilities a small 11.5M-parameter autoregressive
           transformer genuinely internalizes during pretraining and which it
           only briefly approximates before discarding. Accepted to the
@@ -49,22 +49,22 @@
         <ul>
           <li>
             <b>Transient structural emergence.</b> Across five seeds, I tracked
-            linear-probe accuracy for three <em>structural</em> capabilities
+            linear-probe accuracy for three structural capabilities
             during pretraining - end-of-sentence prediction, modal-verb
             continuation, and adjective-order coherence. All three exhibit the
             same peak-then-collapse trajectory: the probe rises early, peaks
             mid-training, and then degrades back toward chance. Lexical and
             part-of-speech probes, by contrast, remain stable across the same
             run. This is direct evidence that "capability emergence" curves
-            can hide capability <em>loss</em> at small scale.
+            can hide capability loss at small scale.
           </li>
           <li>
             <b>Probe-specific head repurposing.</b> Using
-            <em>activation patching</em> and targeted head ablations across the
+            activation patching and targeted head ablations across the
             model's early layers, I localized the collapse to a small set of
             attention heads in the first two transformer blocks. The same heads
             that briefly carry the structural-probe signal are later
-            <em>repurposed</em> for other downstream functions -
+            repurposed for other downstream functions -
             mid-training the circuit is overwritten in place rather than
             shrunk. The repurposing is probe-specific: different structural
             capabilities collapse onto different head subsets.
@@ -86,7 +86,7 @@
           <div class="fig-placeholder" style="display:none;">
             Drop the key figure at <code>assets/figures/fdgm.png?v=5</code>
           </div>
-          <figcaption>Per-seed argmax-accuracy trajectories for the three structural probes (end-of-sentence, modal continuation, adjective order) over pretraining. All three exhibit a peak-then-collapse shape across five seeds, though peak timing varies (especially for <em>adjective order</em>).</figcaption>
+          <figcaption>Per-seed argmax-accuracy trajectories for the three structural probes (end-of-sentence, modal continuation, adjective order) over pretraining. All three exhibit a peak-then-collapse shape across five seeds, though peak timing varies (especially for adjective order).</figcaption>
         </figure>
 
         <a class="proj-back" href="../#research">← Research</a>
