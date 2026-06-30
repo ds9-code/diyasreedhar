@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Outcome-Free Arbitrage Audits and Coherence Repairs for LLM Forecasters · Diya Sreedhar</title>
+    <link rel="stylesheet" href="../assets/css/main.css?v=35" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../" class="nav-brand">Diya Sreedhar</a>
+      <div class="nav-links">
+        <a href="../#research" class="is-current">Research</a>
+        <a href="../entrepreneurship.html">Entrepreneurship</a>
+        <a href="../cv.html">CV</a>
+        <a href="https://www.linkedin.com/in/diyasreedhar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="project-hero">
+        <h1>Outcome-Free Arbitrage Audits and Coherence Repairs for LLM Forecasters</h1>
+        <aside class="project-hero-anim">
+          <div class="chip-wrap chip-wrap-sm">
+            <svg viewBox="0 0 400 320" class="handgraph-svg hd-mini" xmlns="http://www.w3.org/2000/svg" aria-label="Research projects"></svg>
+            <p class="chip-label">Explore Research</p>
+          </div>
+        </aside>
+      </header>
+
+      <article class="project-body">
+        <p>
+          LLM forecasters output probability estimates that look authoritative
+          but are routinely incoherent - assigning P(A) + P(&not;A) &gt; 1,
+          breaking monotonicity between nested events, or producing
+          conjunctions whose probability exceeds their marginals. The usual
+          way to check a forecaster is to wait for outcomes and score Brier
+          loss, but that takes months and excludes any question whose ground
+          truth never resolves. This work develops audits that detect
+          incoherence without waiting for any outcome, plus lightweight
+          repairs that bring the forecaster back to coherent predictions.
+        </p>
+
+        <ul>
+          <li>
+            <b>Outcome-free arbitrage audits.</b> I construct query
+            portfolios whose probabilities, taken at face value, expose the
+            forecaster to a sure loss - a Dutch book against its own
+            predictions. Detection is purely internal: only the model's own
+            outputs are needed, so the audit runs at inference time on any
+            forecaster, frontier or fine-tuned, and on any question family
+            regardless of resolution horizon.
+          </li>
+          <li>
+            <b>Coherence repairs.</b> Given an incoherent prediction set,
+            I project it onto the probability simplex (and onto monotonicity
+            and conjunction-marginal constraints) under a total-variation
+            objective. The simplex repair is closed-form; the structural
+            constraints reduce to a small quadratic program, so the repair
+            composes with the audit in a single forward pass and preserves
+            the forecaster's information about which event is most likely.
+          </li>
+          <li>
+            <b>Why outcome-free matters.</b> Calibration-style audits need
+            ground truth, which biases monitoring toward near-term
+            resolvable questions and leaves long-horizon or
+            never-resolving forecasts unchecked. Outcome-free audits scale
+            to any horizon, making them suitable for continuous monitoring
+            of deployed forecasters in production rather than as
+            after-the-fact post-mortems.
+          </li>
+        </ul>
+
+        <a class="proj-back" href="../#research">← Research</a>
+      </article>
+
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
