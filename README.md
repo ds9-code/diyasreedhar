@@ -1,6 +1,6 @@
 # diya-site
 
-Personal site for Diya Sreedhar. Single static HTML page, no build step.
+Personal site for Diya Sreedhar. Static HTML site, no build step. GitHub Pages serves it from the `main` branch.
 
 ## Run locally
 
@@ -54,18 +54,19 @@ The current setup is *unlisted* — anyone with the URL sees it — not *private
 ## Files
 
 ```
-index.html                # the page
-assets/css/main.css       # styles + dark/light theme
-assets/js/main.js         # SVG morph animation + scroll reveal + theme toggle
-.claude/launch.json       # local dev-server config
+index.html                 # the home page (profile column + Currently, Previously, Research, Building, Writing, Honors, Press)
+projects/*.html            # one write-up page per research card
+assets/css/site.css        # all styles (light and dark follow the visitor's system setting)
+assets/images/             # headshot and OpenDoor photos
+assets/figures/            # figures used on project pages
+assets/press/              # press thumbnails
 ```
 
 ## Editing
 
-- **Add a project**: copy a `<g class="c-node-g" ...>` block inside `#nodes` and
-  add a matching `<article class="card">` in the Research section. The morph
-  engine auto-distributes nodes around the orbit based on count.
-- **Change shapes**: edit the `SHAPES` array in `assets/js/main.js`. Each entry
-  is a function `(t) -> [x, y]` for `t ∈ [0, 1)` walking around the perimeter.
-- **Change pacing**: `holdMs` (time on each shape) and `morphMs` (transition
-  duration) at the top of the morph-state section.
+- **Add a research card**: copy one `<li><details class="card">...</details></li>` block inside
+  `#research .cards` in `index.html`. The summary holds the title, a meta line and a one-line
+  blurb; the `card-body` holds the longer text shown when the card is opened.
+- **Add a project page**: copy any file in `projects/` and replace the `<h1>` and the `<article>` body.
+- **Change the headshot**: replace `assets/images/headshot.jpg` with a square image (400x400 or larger).
+- **Change "Currently" or "Previously"**: each line is one `<li>` with a `label` and a `desc`.
