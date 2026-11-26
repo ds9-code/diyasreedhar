@@ -16,7 +16,20 @@
     <link rel="stylesheet" href="assets/css/site.css?v=1" />
   </head>
   <body>
-    <div class="layout">
+    <nav class="nav" aria-label="Sections">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#about">Diya Sreedhar</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#building">Building</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#honors">Honors</a></li>
+          <li><a href="#press">Press</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="layout" id="about">
       <aside class="profile">
         <img class="avatar" src="assets/images/headshot.jpg" alt="Diya Sreedhar" />
         <h1 class="name">Diya Sreedhar</h1>
@@ -303,5 +316,23 @@
         <p class="footer">Diya Sreedhar © 2026</p>
       </main>
     </div>
+    <script>
+      {
+        const links = [...document.querySelectorAll(".nav-links a")];
+        const ids = links.map((a) => a.getAttribute("href").slice(1));
+        const setActive = () => {
+          let current = "about";
+          for (const id of ids) {
+            const el = document.getElementById(id);
+            if (el && el.getBoundingClientRect().top <= 120) current = id;
+          }
+          if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = ids[ids.length - 1];
+          links.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === "#" + current));
+        };
+        window.addEventListener("scroll", setActive, { passive: true });
+        window.addEventListener("resize", setActive);
+        setActive();
+      }
+    </script>
   </body>
 </html>
