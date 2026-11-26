@@ -126,7 +126,7 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 14px;
-  padding: 2px 0;
+  padding: 7px 0;
   font-size: 14px;
 }
 .rows .label { color: var(--ink); }
