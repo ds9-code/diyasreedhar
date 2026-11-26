@@ -52,11 +52,11 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 
 .layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 0 48px;
-  max-width: 900px;
+  grid-template-columns: 190px 1fr;
+  gap: 0 44px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 120px 28px 64px;
+  padding: 120px 24px 64px;
 }
 
 .profile {
@@ -67,7 +67,7 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   min-height: 520px;
   display: flex;
   flex-direction: column;
-  padding-right: 28px;
+  padding-right: 20px;
   border-right: 1px solid var(--rule);
 }
 
@@ -76,8 +76,8 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 /* ---------- profile column ---------- */
 
 .avatar {
-  width: 164px;
-  height: 164px;
+  width: 116px;
+  height: 116px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.7);
@@ -85,17 +85,17 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 }
 
 .name {
-  margin: 22px 0 8px;
-  font-size: 34px;
+  margin: 16px 0 6px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.1;
 }
 
-.tagline { margin: 0 0 4px; font-size: 17px; color: var(--accent); }
+.tagline { margin: 0 0 4px; font-size: 15px; color: var(--accent); }
 .tagline-2 { margin: 0; font-size: 15px; font-style: italic; color: var(--ink-soft); }
 
-.links { list-style: none; margin: 26px 0 0; padding: 0; }
+.links { list-style: none; margin: 18px 0 0; padding: 0; }
 .links li { margin: 0 0 9px; }
 .links a { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-soft); }
 .links svg { width: 14px; height: 14px; flex: none; color: var(--muted); }
@@ -253,7 +253,7 @@ html { scroll-padding-top: 72px; scroll-behavior: smooth; }
   border-bottom: 1px solid var(--rule);
 }
 .nav-inner {
-  max-width: 900px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 28px;
   height: 56px;
