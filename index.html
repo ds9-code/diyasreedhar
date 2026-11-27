@@ -13,21 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/site.css?v=3" />
+    <link rel="stylesheet" href="assets/css/site.css?v=4" />
   </head>
   <body>
-    <nav class="nav" aria-label="Sections">
-      <div class="nav-inner">
-        <a class="nav-brand" href="#about">Diya Sreedhar</a>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#building">Building</a></li>
-          <li><a href="#awards">Awards</a></li>
-          <li><a href="#writing">Writing</a></li>
-        </ul>
-      </div>
-    </nav>
     <div class="layout" id="about">
       <aside class="profile">
         <img class="avatar" src="assets/images/headshot.jpg?v=2" alt="Diya Sreedhar" />
@@ -54,6 +42,19 @@
             </a>
           </li>
         </ul>
+
+        <nav class="sidenav" aria-label="Sections">
+          <span class="sidenav-line" aria-hidden="true"></span>
+          <span class="sidenav-trail" aria-hidden="true"></span>
+          <svg class="sidenav-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.9 6.4 4.7 10.1 11 11-6.3.9-10.1 4.6-11 11-.9-6.4-4.7-10.1-11-11 6.3-.9 10.1-4.6 11-11Z" /></svg>
+          <ul class="sidenav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#building">Building</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#writing">Writing</a></li>
+          </ul>
+        </nav>
 
         <p class="location">Cambridge, MA</p>
       </aside>
@@ -197,7 +198,7 @@
         <section class="section" id="building">
           <h2>Building</h2>
           <ul class="cards">
-            <li class="span-all">
+            <li>
               <details class="card">
                 <summary>
                   <span class="card-title">OpenDoor</span>
@@ -381,16 +382,27 @@
     </div>
     <script>
       {
-        const links = [...document.querySelectorAll(".nav-links a")];
+        const nav = document.querySelector(".sidenav");
+        const links = [...nav.querySelectorAll(".sidenav-links a")];
+        const star = nav.querySelector(".sidenav-star");
+        const trail = nav.querySelector(".sidenav-trail");
         const ids = links.map((a) => a.getAttribute("href").slice(1));
         const setActive = () => {
           let current = "about";
           for (const id of ids) {
             const el = document.getElementById(id);
-            if (el && el.getBoundingClientRect().top <= 120) current = id;
+            if (el && el.getBoundingClientRect().top <= 140) current = id;
           }
           if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = ids[ids.length - 1];
-          links.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === "#" + current));
+          let active = links[0];
+          links.forEach((a) => {
+            const on = a.getAttribute("href") === "#" + current;
+            a.classList.toggle("is-active", on);
+            if (on) active = a;
+          });
+          const y = active.offsetTop + active.offsetHeight / 2;
+          star.style.transform = "translateY(" + (y - 7) + "px)";
+          trail.style.height = Math.max(0, y - 4) + "px";
         };
         window.addEventListener("scroll", setActive, { passive: true });
         window.addEventListener("resize", setActive);
