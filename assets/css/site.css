@@ -76,8 +76,8 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 /* ---------- profile column ---------- */
 
 .avatar {
-  width: 116px;
-  height: 116px;
+  width: 152px;
+  height: 152px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.7);
@@ -172,6 +172,15 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   background: #fff;
   border: 1px solid var(--card-border);
   border-radius: 6px;
+}
+.card-thumb-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
 }
 .cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 138px; }
 .cards-media .card-body { padding-left: 138px; }
