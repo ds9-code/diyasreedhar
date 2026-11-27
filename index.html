@@ -87,7 +87,7 @@
                   <span class="card-meta">Kempner Institute · 2026</span>
                 </summary>
                 <div class="card-body">
-                  <p>I built OrganoidAgent in Marinka Zitnik's lab at the Kempner Institute. It works from organoid datasets such as the Human Neural Organoid Cell Atlas. It generates its own hypotheses, designs follow-up experiments, and runs some of them in simulation.</p>
+                  <p>OrganoidAgent is an AI scientist for brain organoid research. It reads organoid datasets such as the Human Neural Organoid Cell Atlas, generates its own hypotheses, designs follow-up experiments and runs some of them in simulation. I built it in Marinka Zitnik's lab, working with the Arlotta lab.</p>
                   <p class="card-links"><a href="https://github.com/mims-harvard/organoidagent" target="_blank" rel="noopener noreferrer">Code</a></p>
                 </div>
               </details>
@@ -99,7 +99,7 @@
                   <span class="card-meta">NIH · 2026</span>
                 </summary>
                 <div class="card-body">
-                  <p>As an ML and computational biophysics fellow at the National Institute of Neurological Disorders and Stroke, I model lipid membrane-protein structures. I test how accurately AlphaFold and similar tools predict the structures of these proteins inside the membrane.</p>
+                  <p>I benchmark AlphaFold and similar structure predictors on proteins embedded in lipid membranes, comparing their predictions against experimental structures. Membrane proteins are common drug targets, so the work tests whether researchers can rely on these predicted structures for them.</p>
                 </div>
               </details>
             </li>
@@ -110,7 +110,7 @@
                   <span class="card-meta">National Institute of Standards and Technology · 2026</span>
                 </summary>
                 <div class="card-body">
-                  <p>On the bio team at the U.S. Center for AI Standards and Innovation, I worked on CAISI's unclassified pre-release evaluation of GPT-Rosalind. I built the harness that runs the benchmarks and designed task sets that test dual-use biology questions.</p>
+                  <p>CAISI ran the unclassified pre-release evaluation of GPT-Rosalind, OpenAI's biology-tuned frontier model. I built the harness that measured its gains over GPT-5 models on chemistry, molecular reasoning and experiment-design benchmarks, and designed task sets that score its responses to dual-use biology requests. CAISI uses these results in its recommendations on access controls for biology-capable models.</p>
                   <p class="card-links"><a href="https://openai.com/index/introducing-gpt-rosalind/" target="_blank" rel="noopener noreferrer">GPT-Rosalind announcement</a><a href="https://www.nist.gov/caisi" target="_blank" rel="noopener noreferrer">CAISI</a></p>
                 </div>
               </details>
@@ -122,7 +122,7 @@
                   <span class="card-meta">ICML · 2026</span>
                 </summary>
                 <div class="card-body">
-                  <p>I tracked which capabilities an 11.5M-parameter transformer keeps through pretraining and which it learns briefly and then discards, and linked the short-lived ones to repurposed early attention heads.</p>
+                  <p>In an 11.5M-parameter transformer trained with five seeds, three grammar capabilities rise early in pretraining, peak, then fall back toward chance, while word-level probes stay stable. Activation patching and head ablations show that each capability depends on a few early attention heads, which the model later reuses for other functions. Measuring emergence at one checkpoint can therefore miss capabilities a model learns and then loses.</p>
                   <p class="card-links"><a href="https://openreview.net/forum?id=9D0qO8cB1M" target="_blank" rel="noopener noreferrer">Paper</a></p>
                 </div>
               </details>
@@ -134,7 +134,7 @@
                   <span class="card-meta">CVPR · 2026</span>
                 </summary>
                 <div class="card-body">
-                  <p>At the AIM Lab at Harvard Medical School, I studied how a multimodal foundation model combines CT and MRI embeddings with clinical metadata. I found when disagreement between the two predicts downstream failure, and measured how multimodal pretraining changes calibration and robustness.</p>
+                  <p>At the AIM Lab at Harvard Medical School, I analyzed cross-modal attention in a model that combines CT and MRI embeddings with clinical metadata. I found when each input drives a prediction and when disagreement between them predicts failure, and measured how multimodal pretraining changes calibration and worst-group robustness against imaging-only baselines. The paper proposes checks to run before clinical deployment.</p>
                   <p class="card-links"><a href="https://openreview.net/pdf?id=ZTaTUmELuw" target="_blank" rel="noopener noreferrer">Paper</a></p>
                 </div>
               </details>
@@ -146,7 +146,7 @@
                   <span class="card-meta">Kempner Institute · 2025</span>
                 </summary>
                 <div class="card-body">
-                  <p>PROTON is a 578M-parameter graph transformer trained on a knowledge graph of brain biology. Its predictions have been tested in genetic screens, patient-derived organoids and clinical records for Parkinson's disease, bipolar disorder and Alzheimer's disease.</p>
+                  <p>PROTON is a 578M-parameter graph transformer trained on NeuroKG, a brain-biology knowledge graph with 147,020 nodes and 7.4 million edges. Researchers tested its drug-repurposing predictions in Parkinson's genetic screens, in patient-derived organoids for bipolar disorder, where calcitriol reversed changes in 73 proteins, and in records of 610,524 patients, where five predicted drugs were linked to lower seven-year dementia risk.</p>
                   <p class="card-links"><a href="https://arxiv.org/abs/2512.13724" target="_blank" rel="noopener noreferrer">Paper</a><a href="https://www.protonmodel.ai/" target="_blank" rel="noopener noreferrer">Website</a><a href="https://github.com/mims-harvard/PROTON" target="_blank" rel="noopener noreferrer">Code</a></p>
                 </div>
               </details>
@@ -158,7 +158,7 @@
                   <span class="card-meta">NeurIPS · 2025</span>
                 </summary>
                 <div class="card-body">
-                  <p>Several hundred researchers ran the notebook during the workshop. It ships in the public aws-neuron/neuron-workshops repository.</p>
+                  <p>I wrote the official fine-tuning notebook for Amazon's Build on Trainium workshop at NeurIPS 2025, a PyTorch workflow for distributed training and inference benchmarking on Trainium chips. Tuning it for Trainium's XLA compiler cut cold-start compile time about tenfold on the workshop model. Several hundred researchers ran it, and it is the starting point in the public aws-neuron/neuron-workshops repository.</p>
                   <p class="card-links"><a href="https://github.com/aws-neuron/neuron-workshops" target="_blank" rel="noopener noreferrer">Code</a></p>
                 </div>
               </details>
@@ -170,7 +170,7 @@
                   <span class="card-meta">NASA · 2025</span>
                 </summary>
                 <div class="card-body">
-                  <p>Our team's proposal ranked first of 100 student teams.</p>
+                  <p>For NASA's Lucy mission, I ran about 600 density functional theory calculations with active learning to narrow about 10,000 candidate electrocatalyst compositions to a shortlist of 25. I then trained a graph neural network potential on the results that matched DFT energies and forces while running about 10,000 times faster. Our team's proposal ranked first of 100 student teams.</p>
                   <p class="card-links"><a href="https://science.nasa.gov/mission/lucy/spacecraft/" target="_blank" rel="noopener noreferrer">Lucy mission</a></p>
                 </div>
               </details>
