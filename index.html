@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/site.css?v=4" />
+    <link rel="stylesheet" href="assets/css/site.css?v=5" />
   </head>
   <body>
     <div class="layout" id="about">
@@ -46,7 +46,7 @@
         <nav class="sidenav" aria-label="Sections">
           <span class="sidenav-line" aria-hidden="true"></span>
           <span class="sidenav-trail" aria-hidden="true"></span>
-          <svg class="sidenav-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.9 6.4 4.7 10.1 11 11-6.3.9-10.1 4.6-11 11-.9-6.4-4.7-10.1-11-11 6.3-.9 10.1-4.6 11-11Z" /></svg>
+          <span class="sidenav-star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 1c.9 6.4 4.7 10.1 11 11-6.3.9-10.1 4.6-11 11-.9-6.4-4.7-10.1-11-11 6.3-.9 10.1-4.6 11-11Z" /></svg></span>
           <ul class="sidenav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#research">Research</a></li>
@@ -62,18 +62,18 @@
       <main class="content">
         <section class="section">
           <h2>Currently</h2>
-          <ul class="rows">
-            <li><span class="label">Kempner Institute</span><span class="desc">Researcher: AI scientist agents for brain organoid data.</span></li>
+          <ul class="rows rows-logo">
+            <li><span class="org-mark" aria-hidden="true">KI</span><span class="label">Kempner Institute</span><span class="desc">Researcher: AI scientist agents for brain organoid data.</span></li>
           </ul>
         </section>
 
         <section class="section">
           <h2>Previously</h2>
-          <ul class="rows">
-            <li><span class="label">National Institutes of Health</span><span class="desc">ML and computational biophysics fellow: how well AlphaFold models lipid membrane-protein structures.</span></li>
-            <li><span class="label">National Institute of Standards and Technology</span><span class="desc">Intern, Center for AI Standards and Innovation: biosecurity evals of frontier bio models and evaluation awareness.</span></li>
-            <li><span class="label">Microsoft Research</span><span class="desc">Contractor: red-teaming multi-agent LLM networks.</span></li>
-            <li><span class="label">Amazon AGI</span><span class="desc">Intern: multi-turn RL methods for open source and foundation models.</span></li>
+          <ul class="rows rows-logo">
+            <li><span class="org-mark" aria-hidden="true">NIH</span><span class="label">National Institutes of Health</span><span class="desc">ML and computational biophysics fellow: how well AlphaFold models lipid membrane-protein structures.</span></li>
+            <li><span class="org-mark" aria-hidden="true">NIST</span><span class="label">National Institute of Standards and Technology</span><span class="desc">Intern, Center for AI Standards and Innovation: biosecurity evals of frontier bio models and evaluation awareness.</span></li>
+            <li><span class="org-mark" aria-hidden="true">MSR</span><span class="label">Microsoft Research</span><span class="desc">Contractor: red-teaming multi-agent LLM networks.</span></li>
+            <li><span class="org-mark" aria-hidden="true">AGI</span><span class="label">Amazon AGI</span><span class="desc">Intern: multi-turn RL methods for open source and foundation models.</span></li>
           </ul>
         </section>
 
@@ -81,112 +81,144 @@
 
         <section class="section" id="research">
           <h2>Research</h2>
-          <ul class="cards">
+          <ul class="cards cards-media">
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">OrganoidAgent: an AI Scientist for Brain Organoids</span>
-                  <span class="card-meta">Kempner Institute · 2026</span>
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">OrganoidAgent: an AI Scientist for Brain Organoids</span>
+                    <span class="card-meta">Kempner Institute</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>OrganoidAgent is an AI scientist for brain organoid research. It reads organoid datasets such as the Human Neural Organoid Cell Atlas, generates its own hypotheses, designs follow-up experiments and runs some of them in simulation. I built it in Marinka Zitnik's lab, working with the Arlotta lab.</p>
-                  <p class="card-links"><a href="https://github.com/mims-harvard/organoidagent" target="_blank" rel="noopener noreferrer">Code</a></p>
+                  <p class="card-links"><a href="https://github.com/mims-harvard/organoidagent" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 17-5-5 5-5M15 7l5 5-5 5"/></svg><span>Code</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">ML Surrogate for Lipid-Bilayer Deformation</span>
-                  <span class="card-meta">NIH &middot; 2026</span>
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">ML Surrogate for Lipid-Bilayer Deformation</span>
+                    <span class="card-meta">NIH</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>In the Computational Structural Biology Section at NINDS, I trained a machine-learning surrogate for lipid-bilayer deformation that runs about 104 times faster than the molecular dynamics it replaces. I used it in a membrane-protein pipeline over both experimental and AlphaFold structures, which lets the pipeline cover far more proteins than simulation alone. Best poster at NIH Summer Poster Day. With G. Fiorin, A. A. Aleksandrova and L. R. Forrest.</p>
-                  <p class="card-links"><a href="https://www.ninds.nih.gov/node/10528" target="_blank" rel="noopener noreferrer">Forrest Lab</a></p>
+                  <p class="card-links"><a href="https://www.ninds.nih.gov/node/10528" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Forrest Lab</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Biosecurity Evaluation of OpenAI's GPT-Rosalind</span>
-                  <span class="card-meta">National Institute of Standards and Technology · 2026</span>
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">Biosecurity Evaluation of OpenAI's GPT-Rosalind</span>
+                    <span class="card-meta">National Institute of Standards and Technology</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>CAISI ran the unclassified pre-release evaluation of GPT-Rosalind, OpenAI's biology-tuned frontier model. I built the harness that measured its gains over GPT-5 models on chemistry, molecular reasoning and experiment-design benchmarks, and designed task sets that score its responses to dual-use biology requests. CAISI uses these results in its recommendations on access controls for biology-capable models.</p>
-                  <p class="card-links"><a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/#building-on-our-safety-and-resilience-work:~:text=Center%20for%20AI%20Standards%20and%20Innovation" target="_blank" rel="noopener noreferrer">OpenAI and CAISI Rosalind Research</a><a href="https://openai.com/index/us-caisi-uk-aisi-ai-update/" target="_blank" rel="noopener noreferrer">OpenAI and CAISI Research Partnership</a></p>
+                  <p class="card-links"><a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/#building-on-our-safety-and-resilience-work:~:text=Center%20for%20AI%20Standards%20and%20Innovation" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>OpenAI and CAISI Rosalind Research</span></a><a href="https://openai.com/index/us-caisi-uk-aisi-ai-update/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>OpenAI and CAISI Research Partnership</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Natural Ungrokking: Which Rules Survive Pretraining</span>
-                  <span class="card-meta">ICML · 2026</span>
+                  <img class="card-thumb" src="assets/figures/fdgm.png" alt="Per-seed accuracy trajectories for three grammar probes over pretraining" loading="lazy" />
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">Natural Ungrokking: Which Rules Survive Pretraining</span>
+                    <span class="card-meta">ICML</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>In an 11.5M-parameter transformer trained with five seeds, three grammar capabilities rise early in pretraining, peak, then fall back toward chance, while word-level probes stay stable. Activation patching and head ablations show that each capability depends on a few early attention heads, which the model later reuses for other functions. Measuring emergence at one checkpoint can therefore miss capabilities a model learns and then loses.</p>
-                  <p class="card-links"><a href="https://openreview.net/forum?id=9D0qO8cB1M" target="_blank" rel="noopener noreferrer">Paper</a></p>
+                  <p class="card-links"><a href="https://openreview.net/forum?id=9D0qO8cB1M" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span>Paper</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Multimodal Foundation Models for Biomedical Imaging</span>
-                  <span class="card-meta">CVPR · 2026</span>
+                  <img class="card-thumb" src="assets/figures/aim-medical.png" alt="Cross-modal attention map between imaging and clinical-metadata tokens" loading="lazy" />
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">Multimodal Foundation Models for Biomedical Imaging</span>
+                    <span class="card-meta">CVPR</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>At the AIM Lab at Harvard Medical School, I analyzed cross-modal attention in a model that combines CT and MRI embeddings with clinical metadata. I found when each input drives a prediction and when disagreement between them predicts failure, and measured how multimodal pretraining changes calibration and worst-group robustness against imaging-only baselines. The paper proposes checks to run before clinical deployment.</p>
-                  <p class="card-links"><a href="https://openreview.net/pdf?id=ZTaTUmELuw" target="_blank" rel="noopener noreferrer">Paper</a></p>
+                  <p class="card-links"><a href="https://openreview.net/pdf?id=ZTaTUmELuw" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span>Paper</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Multi-Turn RL for Open-Source and Foundation Models</span>
-                  <span class="card-meta">Amazon AGI &middot; 2025</span>
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">Multi-Turn RL for Open-Source and Foundation Models</span>
+                    <span class="card-meta">Amazon AGI</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>As an intern on the Amazon AGI team, I worked on multi-turn reinforcement learning methods for open source and foundation models. Standard RLHF scores each response on its own, so an early tool call earns no credit for the steps it makes possible three turns later. In multi-turn RL the reward is computed over the whole interaction, which is what trains tool orchestration, error recovery and multi-step reasoning. The target is agents that run long workflows, where one wrong early action spoils every step after it.</p>
-                  <p class="card-links"><a href="https://aws.amazon.com/blogs/machine-learning/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyperpod/" target="_blank" rel="noopener noreferrer">Multi-turn RL on Amazon Nova</a></p>
+                  <p class="card-links"><a href="https://aws.amazon.com/blogs/machine-learning/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyperpod/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Multi-turn RL on Amazon Nova</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">PROTON: Graph AI for Neurological Drug Repurposing</span>
-                  <span class="card-meta">Kempner Institute · 2025</span>
+                  <img class="card-thumb" src="assets/figures/proton.png" alt="UMAP of PROTON embeddings separating twelve biomedical entity types" loading="lazy" />
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">PROTON: Graph AI for Neurological Drug Repurposing</span>
+                    <span class="card-meta">Kempner Institute</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>PROTON is a 578M-parameter graph transformer trained on NeuroKG, a brain-biology knowledge graph with 147,020 nodes and 7.4 million edges. Researchers tested its drug-repurposing predictions in Parkinson's genetic screens, in patient-derived organoids for bipolar disorder, where calcitriol reversed changes in 73 proteins, and in records of 610,524 patients, where five predicted drugs were linked to lower seven-year dementia risk.</p>
-                  <p class="card-links"><a href="https://arxiv.org/abs/2512.13724" target="_blank" rel="noopener noreferrer">Paper</a><a href="https://www.protonmodel.ai/" target="_blank" rel="noopener noreferrer">Website</a><a href="https://github.com/mims-harvard/PROTON" target="_blank" rel="noopener noreferrer">Code</a></p>
+                  <p class="card-links"><a href="https://arxiv.org/abs/2512.13724" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span>Paper</span></a><a href="https://www.protonmodel.ai/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Website</span></a><a href="https://github.com/mims-harvard/PROTON" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 17-5-5 5-5M15 7l5 5-5 5"/></svg><span>Code</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Distributed Fine-Tuning on AWS Trainium</span>
-                  <span class="card-meta">NeurIPS · 2025</span>
+                  <img class="card-thumb" src="assets/figures/aws-neurips.png" alt="Strong-scaling throughput of LLaMA 2 models on AWS Trainium against A100 instances" loading="lazy" />
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">Distributed Fine-Tuning on AWS Trainium</span>
+                    <span class="card-meta">NeurIPS</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>I wrote the official fine-tuning notebook for Amazon's Build on Trainium workshop at NeurIPS 2025, a PyTorch workflow for distributed training and inference benchmarking on Trainium chips. Tuning it for Trainium's XLA compiler cut cold-start compile time about tenfold on the workshop model. Several hundred researchers ran it, and it is the starting point in the public aws-neuron/neuron-workshops repository.</p>
-                  <p class="card-links"><a href="https://github.com/aws-neuron/neuron-workshops" target="_blank" rel="noopener noreferrer">Code</a></p>
+                  <p class="card-links"><a href="https://github.com/aws-neuron/neuron-workshops" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 17-5-5 5-5M15 7l5 5-5 5"/></svg><span>Code</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Density Functional Theory for NASA's Lucy Mission</span>
-                  <span class="card-meta">NASA · 2025</span>
+                  <img class="card-thumb" src="assets/figures/nasa-lspace.png" alt="DFT adsorption-energy landscape for candidate electrocatalysts" loading="lazy" />
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">Density Functional Theory for NASA's Lucy Mission</span>
+                    <span class="card-meta">NASA</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>Through the NASA L'Space program, I ran about 600 density functional theory calculations with active learning to narrow about 10,000 candidate electrocatalyst compositions to a shortlist of 25. I then trained a graph neural network potential on the results that matched DFT energies and forces while running about 10,000 times faster. Our team's proposal ranked first of 100 student teams.</p>
-                  <p class="card-links"><a href="https://science.nasa.gov/mission/lucy/spacecraft/" target="_blank" rel="noopener noreferrer">Lucy mission</a><a href="https://www.lspace.asu.edu/" target="_blank" rel="noopener noreferrer">NASA L'Space Research Program</a></p>
+                  <p class="card-links"><a href="https://science.nasa.gov/mission/lucy/spacecraft/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Lucy mission</span></a><a href="https://www.lspace.asu.edu/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>NASA L'Space Research Program</span></a></p>
                 </div>
               </details>
             </li>
@@ -197,13 +229,17 @@
 
         <section class="section" id="building">
           <h2>Building</h2>
-          <ul class="cards">
+          <ul class="cards cards-media">
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">OpenDoor</span>
-                  <span class="card-meta">Founder · Kevin Xu Innovation Challenge, 1st place, 2025</span>
-                  <span class="card-blurb">An AI platform that connects unhoused and underhoused people to the social services they qualify for.</span>
+                  <img class="card-thumb" src="assets/figures/opendoor.jpg" alt="Diya Sreedhar receiving the Kevin Xu Innovation Challenge prize, 2025" loading="lazy" />
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">OpenDoor</span>
+                    <span class="card-meta">Founder · Kevin Xu Innovation Challenge, 1st place</span>
+                    <span class="card-blurb">An AI platform that connects unhoused and underhoused people to the social services they qualify for.</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>OpenDoor matches people to housing, healthcare, food assistance and job training without long waitlists or confusing eligibility paperwork. It combines a real-time service-matching engine, an AI caseworker that handles client follow-up, and a job-training agent for interview preparation and certifications.</p>
@@ -214,10 +250,10 @@
                     <img src="assets/images/opendoor-harvard-seas.png" alt="Diya Sreedhar presenting OpenDoor at the Harvard SEAS library dedication, March 2026" loading="lazy" />
                   </div>
                   <p class="card-links">
-                    <a href="https://opendoor-tech.com/" target="_blank" rel="noopener noreferrer">opendoor-tech.com</a>
-                    <a href="https://www.equitechfutures.com/articles/the-billion-dollar-information-gap-how-opendoor-catches-people-before-they-fall" target="_blank" rel="noopener noreferrer">EquiTech Futures profile</a>
-                    <a href="https://www.rhodeshouse.ox.ac.uk/unlikeminded/the-kevin-xu-innovation-challenge-2025/" target="_blank" rel="noopener noreferrer">Rhodes Trust announcement</a>
-                    <a href="https://www.equitechfutures.com/articles/kevin-xu-innovation-challenge-names-winners-2025" target="_blank" rel="noopener noreferrer">Equitech Futures announcement</a>
+                    <a href="https://opendoor-tech.com/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>opendoor-tech.com</span></a>
+                    <a href="https://www.equitechfutures.com/articles/the-billion-dollar-information-gap-how-opendoor-catches-people-before-they-fall" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>EquiTech Futures profile</span></a>
+                    <a href="https://www.rhodeshouse.ox.ac.uk/unlikeminded/the-kevin-xu-innovation-challenge-2025/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Rhodes Trust announcement</span></a>
+                    <a href="https://www.equitechfutures.com/articles/kevin-xu-innovation-challenge-names-winners-2025" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Equitech Futures announcement</span></a>
                   </p>
                 </div>
               </details>
@@ -233,8 +269,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">NCWIT Collegiate Award Finalist</span>
-                  <span class="card-meta">National Center for Women &amp; Information Technology · 2026</span>
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">NCWIT Collegiate Award Finalist</span>
+                    <span class="card-meta">National Center for Women &amp; Information Technology</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>One of 63 finalists from 47 institutions nationwide.</p>
@@ -244,8 +283,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">CRA Outstanding Undergraduate Researcher</span>
-                  <span class="card-meta">Computing Research Association · 2026</span>
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">CRA Outstanding Undergraduate Researcher</span>
+                    <span class="card-meta">Computing Research Association</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>Selected from thousands of applications across North America.</p>
@@ -255,8 +297,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Y Combinator Fellowship</span>
-                  <span class="card-meta">Y Combinator · 2026</span>
+                  <span class="card-text">
+                    <span class="card-year">2026</span>
+                    <span class="card-title">Y Combinator Fellowship</span>
+                    <span class="card-meta">Y Combinator</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>$90,000 in compute and research credits for LLM inference-time optimization research. Inaugural YC Fellows cohort.</p>
@@ -266,20 +311,26 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Kevin Xu Innovation Challenge, First Place</span>
-                  <span class="card-meta">Rhodes Trust and Equitech Futures · 2025</span>
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">Kevin Xu Innovation Challenge, First Place</span>
+                    <span class="card-meta">Rhodes Trust and Equitech Futures</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>$15,000 (£10,000) prize for OpenDoor. First place out of 6 finalists and 12 semifinalist teams at the Rhodes Forum on Technology &amp; Society in Oxford. Youngest winner in the challenge's history.</p>
-                  <p class="card-links"><a href="https://www.rhodeshouse.ox.ac.uk/unlikeminded/the-kevin-xu-innovation-challenge-2025/" target="_blank" rel="noopener noreferrer">Website</a></p>
+                  <p class="card-links"><a href="https://www.rhodeshouse.ox.ac.uk/unlikeminded/the-kevin-xu-innovation-challenge-2025/" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span>Website</span></a></p>
                 </div>
               </details>
             </li>
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">GE-Reagan Foundation Scholarship</span>
-                  <span class="card-meta">Ronald Reagan Presidential Foundation · 2025</span>
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">GE-Reagan Foundation Scholarship</span>
+                    <span class="card-meta">Ronald Reagan Presidential Foundation</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>$40,000 scholarship, paid as $10,000 a year for four years. One of 10 scholars selected from about 16,000 applicants.</p>
@@ -289,8 +340,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Women at Microsoft Scholarship</span>
-                  <span class="card-meta">Microsoft · 2025</span>
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">Women at Microsoft Scholarship</span>
+                    <span class="card-meta">Microsoft</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>$20,000 scholarship for women studying computing.</p>
@@ -300,8 +354,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Taco Bell Live Más Scholarship</span>
-                  <span class="card-meta">Taco Bell Foundation · 2025</span>
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">Taco Bell Live Más Scholarship</span>
+                    <span class="card-meta">Taco Bell Foundation</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>$25,000 scholarship. Nearly 1,000 students received Live Más scholarships in 2025.</p>
@@ -311,8 +368,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">AWS Startup Grant</span>
-                  <span class="card-meta">Amazon Web Services · 2025</span>
+                  <span class="card-text">
+                    <span class="card-year">2025</span>
+                    <span class="card-title">AWS Startup Grant</span>
+                    <span class="card-meta">Amazon Web Services</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>$50,000 in compute and research credits for OpenDoor.</p>
@@ -322,8 +382,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">ISEF American Statistical Association Special Award</span>
-                  <span class="card-meta">Society for Science · 2024</span>
+                  <span class="card-text">
+                    <span class="card-year">2024</span>
+                    <span class="card-title">ISEF American Statistical Association Special Award</span>
+                    <span class="card-meta">Society for Science</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>Special award at ISEF 2024, where nearly 2,000 finalists from about 70 countries competed.</p>
@@ -333,8 +396,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">USA Biology Olympiad Top 50</span>
-                  <span class="card-meta">Center for Excellence in Education · 2024</span>
+                  <span class="card-text">
+                    <span class="card-year">2024</span>
+                    <span class="card-title">USA Biology Olympiad Top 50</span>
+                    <span class="card-meta">Center for Excellence in Education</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>Top 50 students nationally.</p>
@@ -344,8 +410,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">Rise Global Winner</span>
-                  <span class="card-meta">Rhodes Trust and Schmidt Futures · 2023</span>
+                  <span class="card-text">
+                    <span class="card-year">2023</span>
+                    <span class="card-title">Rise Global Winner</span>
+                    <span class="card-meta">Rhodes Trust and Schmidt Futures</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>One of 100 winners from 80,000 applicants worldwide. Winners can receive a need-based four-year college scholarship and apply for project funding.</p>
@@ -355,8 +424,11 @@
             <li>
               <details class="card">
                 <summary>
-                  <span class="card-title">NJSHS First Grand Prize</span>
-                  <span class="card-meta">National Junior Science and Humanities Symposium · 2023</span>
+                  <span class="card-text">
+                    <span class="card-year">2023</span>
+                    <span class="card-title">NJSHS First Grand Prize</span>
+                    <span class="card-meta">National Junior Science and Humanities Symposium</span>
+                  </span>
                 </summary>
                 <div class="card-body">
                   <p>$5,000 scholarship. First place in Computer Science and Math among 227 national competitors from 49 regional symposia.</p>
@@ -401,7 +473,7 @@
             if (on) active = a;
           });
           const y = active.offsetTop + active.offsetHeight / 2;
-          star.style.transform = "translateY(" + (y - 7) + "px)";
+          star.style.transform = "translateY(" + (y - 9) + "px)";
           trail.style.height = Math.max(0, y - 4) + "px";
         };
         window.addEventListener("scroll", setActive, { passive: true });
