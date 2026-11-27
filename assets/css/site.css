@@ -133,19 +133,15 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .rows .desc { color: var(--muted); }
 
 /* organization marks on the Currently and Previously rows */
-.rows-logo li { grid-template-columns: 36px 150px 1fr; align-items: center; }
+.rows-logo li { grid-template-columns: 86px 150px 1fr; align-items: center; }
 .org-mark {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 86px;
+  height: 42px;
+  object-fit: contain;
+  padding: 5px 7px;
   border: 1px solid var(--card-border);
-  border-radius: 9px;
-  background: var(--card-bg);
-  font-size: 11px;
-  letter-spacing: 0.03em;
-  color: var(--muted);
+  border-radius: 8px;
+  background: #fff;
 }
 
 /* ---------- entry list (research, building, awards) ---------- */
@@ -173,15 +169,7 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   border: 1px solid var(--card-border);
   border-radius: 6px;
 }
-.card-thumb-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--card-bg);
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
+.card-thumb-logo { padding: 16px 18px; }
 .cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 138px; }
 .cards-media .card-body { padding-left: 138px; }
 .card-year { display: block; margin-bottom: 2px; font-size: 12px; color: var(--muted); }
@@ -277,7 +265,8 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   .location { margin-top: 0; padding-top: 10px; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .rows li { grid-template-columns: 1fr; gap: 0; padding: 4px 0; }
-  .rows-logo li { grid-template-columns: 36px 1fr; gap: 0 12px; align-items: start; padding: 7px 0; }
+  .rows-logo li { grid-template-columns: 76px 1fr; gap: 0 12px; align-items: start; padding: 7px 0; }
+  .org-mark { width: 76px; height: 38px; }
   .rows-logo .desc { grid-column: 2; }
   .card-thumb { width: 92px; }
   .cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 0; }
