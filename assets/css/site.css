@@ -133,15 +133,15 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .rows .desc { color: var(--muted); }
 
 /* organization marks on the Currently and Previously rows */
-.rows-logo li { grid-template-columns: 86px 150px 1fr; align-items: center; }
-.org-mark {
-  width: 86px;
-  height: 42px;
+.rows-logo li { grid-template-columns: 104px 150px 1fr; align-items: center; }
+.org-mark { display: block; }
+.org-mark img,
+img.org-mark {
+  display: block;
+  width: 104px;
+  height: 40px;
   object-fit: contain;
-  padding: 5px 7px;
-  border: 1px solid var(--card-border);
-  border-radius: 8px;
-  background: #fff;
+  object-position: left center;
 }
 
 /* ---------- entry list (research, building, awards) ---------- */
@@ -162,16 +162,15 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .card-text { flex: 1; min-width: 0; }
 .card-thumb {
   flex: none;
-  width: 124px;
+  width: 200px;
   aspect-ratio: 4 / 3;
-  object-fit: contain;
+  object-fit: cover;
   background: #fff;
   border: 1px solid var(--card-border);
   border-radius: 6px;
 }
-.card-thumb-logo { padding: 16px 18px; }
-.cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 138px; }
-.cards-media .card-body { padding-left: 138px; }
+.cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 214px; }
+.cards-media .card-body { padding-left: 214px; }
 .card-year { display: block; margin-bottom: 2px; font-size: 12px; color: var(--muted); }
 .card summary::-webkit-details-marker { display: none; }
 .card summary::after {
@@ -265,10 +264,10 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   .location { margin-top: 0; padding-top: 10px; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .rows li { grid-template-columns: 1fr; gap: 0; padding: 4px 0; }
-  .rows-logo li { grid-template-columns: 76px 1fr; gap: 0 12px; align-items: start; padding: 7px 0; }
-  .org-mark { width: 76px; height: 38px; }
+  .rows-logo li { grid-template-columns: 88px 1fr; gap: 0 12px; align-items: start; padding: 7px 0; }
+  .org-mark img, img.org-mark { width: 88px; height: 34px; }
   .rows-logo .desc { grid-column: 2; }
-  .card-thumb { width: 92px; }
+  .card-thumb { width: 124px; }
   .cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 0; }
   .cards-media .card-body { padding-left: 0; }
 }
