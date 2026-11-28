@@ -169,8 +169,7 @@ img.org-mark {
   border: 1px solid var(--card-border);
   border-radius: 6px;
 }
-.cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 214px; }
-.cards-media .card-body { padding-left: 214px; }
+.cards-media .card:has(.card-thumb) .card-body { padding-left: 214px; }
 .card-year { display: block; margin-bottom: 2px; font-size: 12px; color: var(--muted); }
 .card summary::-webkit-details-marker { display: none; }
 .card summary::after {
@@ -268,8 +267,7 @@ img.org-mark {
   .org-mark img, img.org-mark { width: 88px; height: 34px; }
   .rows-logo .desc { grid-column: 2; }
   .card-thumb { width: 124px; }
-  .cards-media .card summary:not(:has(.card-thumb)) .card-text { margin-left: 0; }
-  .cards-media .card-body { padding-left: 0; }
+  .cards-media .card:has(.card-thumb) .card-body { padding-left: 0; }
 }
 
 /* ---------- section nav in the left column ---------- */
