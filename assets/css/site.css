@@ -124,25 +124,14 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .rows { list-style: none; margin: 0; padding: 0; }
 .rows li {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 14px;
+  grid-template-columns: 228px 1fr;
+  gap: 16px;
+  align-items: start;
   padding: 7px 0;
   font-size: 14px;
 }
 .rows .label { color: var(--ink); }
 .rows .desc { color: var(--muted); }
-
-/* organization marks on the Currently and Previously rows */
-.rows-logo li { grid-template-columns: 104px 150px 1fr; align-items: center; }
-.org-mark { display: block; }
-.org-mark img,
-img.org-mark {
-  display: block;
-  width: 104px;
-  height: 40px;
-  object-fit: contain;
-  object-position: left center;
-}
 
 /* ---------- entry list (research, building, awards) ---------- */
 
@@ -201,6 +190,15 @@ img.org-mark {
 .card[open] .card-blurb { display: none; }
 
 .card-body { padding: 0 26px 14px 0; font-size: 13.5px; color: var(--ink-soft); }
+
+/* awards sit in two compact columns */
+#awards .cards { display: grid; grid-template-columns: 1fr 1fr; column-gap: 34px; }
+#awards .cards > li:nth-last-child(-n + 2) { border-bottom: 0; }
+#awards .card summary { gap: 10px; padding: 9px 22px 9px 0; }
+#awards .card summary::after { right: 2px; top: 11px; }
+#awards .card-title { font-size: 15px; }
+#awards .card-meta { margin-top: 3px; font-size: 13px; }
+#awards .card-body { padding-bottom: 11px; }
 .card-body p { margin: 0 0 10px; }
 .card-body .card-links {
   display: flex;
@@ -266,9 +264,8 @@ img.org-mark {
   .location { margin-top: 0; padding-top: 10px; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .rows li { grid-template-columns: 1fr; gap: 0; padding: 4px 0; }
-  .rows-logo li { grid-template-columns: 88px 1fr; gap: 0 12px; align-items: start; padding: 7px 0; }
-  .org-mark img, img.org-mark { width: 88px; height: 34px; }
-  .rows-logo .desc { grid-column: 2; }
+  #awards .cards { grid-template-columns: 1fr; column-gap: 0; }
+  #awards .cards > li:nth-last-child(2) { border-bottom: 1px solid var(--rule); }
   .card-thumb { width: 124px; }
   .cards-media .card:has(.card-thumb) { min-height: 0; }
   .cards-media .card:has(.card-thumb) .card-thumb { position: static; }
