@@ -108,8 +108,8 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .section:first-child h2 { margin-top: 0; }
 
 .section h2 {
-  margin: 0 0 6px;
-  font-size: 17px;
+  margin: 0 0 8px;
+  font-size: 20px;
   font-weight: 700;
 }
 
